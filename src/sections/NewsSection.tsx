@@ -35,7 +35,7 @@ export default async function NewsSection({
 }) {
   const newsToShow = showRecent ? news.slice(0, 3) : news;
   return (
-    <section id='news' className='py-20 bg-gray-50'>
+    <section id='news' className='py-20 bg-stone-50'>
       <div className='layout'>
         <h2 className='mb-12 text-center text-3xl font-bold text-gray-900'>
           {showRecent ? 'Recent News' : 'News'}

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 160 160">
+  <!-- Generator: Adobe Illustrator 29.5.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 141)  -->
+  <defs>
+    <style>
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st2 {
+        fill: url(#New_Gradient_Swatch_copy_24);
+      }
+
+      .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10 {
+        mix-blend-mode: multiply;
+      }
+
+      .st3 {
+        fill: url(#New_Gradient_Swatch_copy_27);
+      }
+
+      .st4 {
+        fill: url(#New_Gradient_Swatch_copy_21);
+      }
+
+      .st5 {
+        fill: url(#New_Gradient_Swatch_copy_22);
+      }
+
+      .st6 {
+        fill: url(#New_Gradient_Swatch_copy_28);
+      }
+
+      .st7 {
+        fill: url(#New_Gradient_Swatch_copy_23);
+      }
+
+      .st8 {
+        fill: url(#New_Gradient_Swatch_copy_26);
+      }
+
+      .st9 {
+        fill: url(#New_Gradient_Swatch_copy_25);
+      }
+
+      .st11 {
+        fill: url(#radial-gradient);
+      }
+
+      .st12 {
+        isolation: isolate;
+      }
+
+      .st13 {
+        fill: #dbccb4;
+      }
+
+      .st14 {
+        fill: #9e7b3e;
+      }
+
+      .st15 {
+        opacity: .66;
+      }
+
+      .st10 {
+        fill: url(#New_Gradient_Swatch_copy_2);
+      }
+
+      .st1 {
+        stroke: #666;
+        stroke-miterlimit: 10;
+        stroke-width: .25px;
+      }
+
+      .st16 {
+        display: none;
+      }
+
+      .st17 {
+        fill: #c7ac7f;
+      }
+
+      .st18 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <linearGradient id="New_Gradient_Swatch_copy_2" data-name="New Gradient Swatch copy 2" x1="68.315357" y1="86.75359" x2="71.655458" y2="80.968365" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".2"/>
+    </linearGradient>
+    <linearGradient id="New_Gradient_Swatch_copy_21" data-name="New Gradient Swatch copy 2" x1="71.655458" y1="57.850654" x2="68.315357" y2="63.635878" xlink:href="#New_Gradient_Swatch_copy_2"/>
+    <linearGradient id="New_Gradient_Swatch_copy_22" data-name="New Gradient Swatch copy 2" x1="79.980585" y1="83.830856" x2="86.680867" y2="83.830856" xlink:href="#New_Gradient_Swatch_copy_2"/>
+    <linearGradient id="New_Gradient_Swatch_copy_23" data-name="New Gradient Swatch copy 2" x1="106.760016" y1="95.447181" x2="100.059734" y2="95.447181" xlink:href="#New_Gradient_Swatch_copy_2"/>
+    <linearGradient id="New_Gradient_Swatch_copy_24" data-name="New Gradient Swatch copy 2" x1="69.946838" y1="33.713794" x2="73.286939" y2="27.92857" xlink:href="#New_Gradient_Swatch_copy_2"/>
+    <linearGradient id="New_Gradient_Swatch_copy_25" data-name="New Gradient Swatch copy 2" x1="130.066034" y1="91.566039" x2="133.406135" y2="85.780815" xlink:href="#New_Gradient_Swatch_copy_2"/>
+    <linearGradient id="New_Gradient_Swatch_copy_26" data-name="New Gradient Swatch copy 2" x1="-1321.861272" y1="106.505996" x2="-1318.521171" y2="112.29122" gradientTransform="translate(-1225.144381 151.781669) rotate(-180)" xlink:href="#New_Gradient_Swatch_copy_2"/>
+    <linearGradient id="New_Gradient_Swatch_copy_27" data-name="New Gradient Swatch copy 2" x1="-1275.098379" y1="79.496688" x2="-1271.758278" y2="85.281913" gradientTransform="translate(-1225.144381 151.781669) rotate(-180)" xlink:href="#New_Gradient_Swatch_copy_2"/>
+    <linearGradient id="New_Gradient_Swatch_copy_28" data-name="New Gradient Swatch copy 2" x1="-1328.559277" y1="21.64167" x2="-1325.219176" y2="15.856445" gradientTransform="translate(-1225.144381 151.781669) rotate(-180)" xlink:href="#New_Gradient_Swatch_copy_2"/>
+    <clipPath id="clippath">
+      <path class="st0" d="M106.719177,85.780945l-6.659424-3.848267v-38.568176l33.382874,19.275513,6.697998-3.848206-.017151-7.722229-46.761719-26.997742-6.702332,3.865417.017151,46.268921-6.676575-3.852539V16.358215l-6.659424-3.848206-53.481201,30.854492.038574,61.709045,53.404053,30.854553,6.719421-3.856812-.021423-7.722229-46.740295-27.010559-.042908-46.260376,33.405945-19.28363.015564.008972v30.836548l-.004333.004272-20.05542-11.566162-6.659424,3.848267v38.568176l33.421448,19.27124,6.659424-3.843994v-23.140869l6.680847,3.852539.021423,54.00824,6.659485,3.848267,46.77887-27.010559v-46.260376l-6.697998-3.865417-26.72345,15.427307ZM126.740356,89.646301v23.119507l-26.680603,15.427246v-30.811707l5.963379,3.422363.696045.40448.004333-.002502.036499.020935v-.041992l19.980347-11.53833ZM66.638306,93.494568l-13.357483-7.713623v-15.410156l13.357483,7.705078v15.418701Z"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="118.58393" cy="23.000272" fx="118.58393" fy="23.000272" r="148.953945" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".5"/>
+      <stop offset=".137093" stop-color="#fff" stop-opacity=".363793"/>
+      <stop offset=".29799" stop-color="#fff" stop-opacity=".233107"/>
+      <stop offset=".463265" stop-color="#fff" stop-opacity=".130648"/>
+      <stop offset=".632492" stop-color="#fff" stop-opacity=".057719"/>
+      <stop offset=".808073" stop-color="#fff" stop-opacity=".014217"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g class="st12">
+    <g id="Layer_5">
+      <g class="st15">
+        <image width="194" height="131" transform="translate(-17 53)" xlink:href="data:image/png;base64,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"/>
+      </g>
+    </g>
+    <g id="Layer_3">
+      <g>
+        <g>
+          <polygon class="st14" points="133.421195 85.78951 133.442622 116.63547 126.740332 112.765797 126.740332 89.646326 133.421195 85.78951"/>
+          <polygon class="st14" points="106.71917 93.494572 106.71917 101.208204 100.059734 97.338532 100.059734 89.667753 106.71917 93.494572"/>
+          <polygon class="st14" points="100.059734 43.36453 93.36173 39.499143 93.36173 147.49 86.702294 143.641754 86.680867 89.63347 86.680867 81.919837 86.676582 74.206205 86.65944 27.937265 133.442622 54.926409 133.442622 62.640041 100.059734 43.36453"/>
+          <polygon class="st14" points="73.340568 66.513999 66.633993 62.644327 66.638278 62.640041 66.638278 31.785511 73.302 27.937265 73.340568 66.513999"/>
+          <path class="st14" d="M66.638278,78.075877l-13.35744-7.705062-6.70229-3.865387v23.140898l20.05973,11.561878v-23.132327ZM73.340568,81.941264v30.824533l-33.421456-19.271225v-38.568163l46.761755,26.993429v7.713633l-6.680863-3.852531-6.659436-3.839675Z"/>
+          <polygon class="st14" points="73.340568 128.214489 73.302 135.928122 19.89795 105.073591 19.859382 43.36453 26.531674 47.225632 26.557386 101.208204 73.340568 128.214489"/>
+        </g>
+        <g>
+          <polygon class="st17" points="140.123485 51.069592 140.140626 58.791796 133.442622 62.640041 133.442622 54.926409 140.123485 51.069592"/>
+          <polygon class="st17" points="100.059734 128.193062 100.059734 135.928122 133.442622 116.63547 133.421195 85.78951 126.740332 89.646326 106.71917 101.208204 106.71917 93.494572 140.140626 74.219061 140.140626 120.47943 93.36173 147.49 93.36173 39.499143 100.059734 43.36453 100.059734 81.932694 100.059734 89.667753 100.059734 97.338532 100.059734 128.193062"/>
+          <polygon class="st17" points="80.000004 124.349102 80.021431 132.071305 73.302 135.928122 73.340568 128.214489 80.000004 124.349102"/>
+          <polygon class="st17" points="80.000004 85.780939 80.000004 108.921837 73.340568 112.765797 73.340568 81.941264 80.000004 85.780939"/>
+          <polygon class="st17" points="53.280838 70.370815 53.280838 85.780939 46.578548 89.646326 46.578548 66.505428 53.280838 70.370815"/>
+          <polygon class="st17" points="80.000004 16.358246 80.000004 70.353674 73.340568 66.513999 73.302 27.937265 66.638278 31.785511 33.216822 51.078163 33.259676 97.338532 26.557386 101.208204 26.531674 47.225632 80.000004 16.358246"/>
+        </g>
+        <g>
+          <polygon class="st13" points="133.442622 116.63547 100.059734 135.928122 100.059734 128.193062 126.740332 112.765797 133.442622 116.63547"/>
+          <polygon class="st13" points="140.123485 51.069592 133.442622 54.926409 86.65944 27.937265 93.36173 24.071878 140.123485 51.069592"/>
+          <polygon class="st13" points="140.140626 74.219061 106.71917 93.494572 100.059734 89.667753 100.059734 81.932694 106.71917 85.780939 133.442622 70.353674 140.140626 74.219061"/>
+          <polygon class="st13" points="86.676582 74.206205 86.680867 81.919837 39.919112 54.926409 46.578548 51.078163 66.633993 62.644327 73.340568 66.513999 80.000004 70.353674 86.676582 74.206205"/>
+          <polygon class="st13" points="66.638278 93.494572 66.638278 101.208204 46.578548 89.646326 53.280838 85.780939 66.638278 93.494572"/>
+          <polygon class="st13" points="80.000004 124.349102 73.340568 128.214489 26.557386 101.208204 33.259676 97.338532 80.000004 124.349102"/>
+          <polygon class="st13" points="80.000004 16.358246 26.531674 47.225632 19.859382 43.36453 73.340568 12.51 80.000004 16.358246"/>
+        </g>
+        <polygon class="st10" points="66.640286 78.072855 66.640286 85.786487 73.340568 89.63171 73.340568 81.941264 66.640286 78.072855"/>
+        <polygon class="st4" points="66.640286 54.955143 66.640286 62.668776 73.340568 66.513999 73.340568 58.823553 66.640286 54.955143"/>
+        <polygon class="st5" points="79.980585 78.051428 79.980585 85.76506 86.680867 89.610283 86.680867 81.919837 79.980585 78.051428"/>
+        <polygon class="st7" points="100.059734 89.667753 100.059734 97.381385 106.760016 101.226608 106.760016 93.536163 100.059734 89.667753"/>
+        <polygon class="st2" points="73.301999 35.627711 73.302 27.937265 66.601718 31.782488 73.301999 35.627711"/>
+        <polygon class="st9" points="133.421195 93.479955 133.421195 85.78951 126.720913 89.634732 133.421195 93.479955"/>
+        <polygon class="st8" points="93.36173 39.499143 93.361729 47.189589 100.062012 43.344366 93.36173 39.499143"/>
+        <polygon class="st3" points="46.598836 66.508451 46.598836 74.198897 53.299118 70.353674 46.598836 66.508451"/>
+        <polygon class="st6" points="100.059735 128.226083 100.059734 135.916528 106.760016 132.071306 100.059735 128.226083"/>
+        <g class="st18">
+          <circle class="st11" cx="118.58393" cy="23.000272" r="148.953945"/>
+        </g>
+        <g class="st16">
+          <path class="st1" d="M106.719163,85.780939l-6.659427-3.848237v-38.568163l33.382872,19.275502,6.698006-3.848237-.017132-7.722212-46.761753-26.997714-6.702296,3.865395.017132,46.268953-6.676559-3.852553V16.358246l-6.659453-3.848237-53.481181,30.85453.03858,61.709061,53.404048,30.85453,6.719428-3.856816-.021422-7.722212-46.740331-27.010557-.042869-46.260374,33.421478-19.292661v30.85453l-.00429.00429-20.05544-11.566159-6.659453,3.848237v38.568163l33.421452,19.271239,6.659453-3.843974v-23.140898l6.680848,3.852553.021422,54.008271,6.659453,3.848237,46.778885-27.010557v-46.260374l-6.698006-3.865395-26.723445,15.427265ZM126.740339,112.765811l-26.680602,15.427265v-30.85453l6.659427,3.869659,20.021176-11.56187v23.119476ZM66.638285,93.494572l-13.357459-7.713633v-15.410107l13.357459,7.705054v15.418686Z"/>
+          <line class="st1" x1="66.633988" y1="62.644344" x2="79.999999" y2="70.353692"/>
+          <line class="st1" x1="66.638273" y1="78.075895" x2="79.999999" y2="85.780957"/>
+          <line class="st1" x1="86.676577" y1="74.206223" x2="86.680862" y2="89.633488"/>
+          <line class="st1" x1="100.059729" y1="81.932711" x2="100.059729" y2="97.33855"/>
+          <line class="st1" x1="133.42119" y1="85.789528" x2="126.740327" y2="89.646344"/>
+          <line class="st1" x1="100.059729" y1="135.92814" x2="100.05973" y2="128.226101"/>
+          <line class="st1" x1="66.638273" y1="31.785529" x2="73.301995" y2="27.937283"/>
+          <line class="st1" x1="46.578543" y1="66.505446" x2="53.280833" y2="70.370833"/>
+          <line class="st1" x1="100.059729" y1="43.364548" x2="93.361725" y2="39.499161"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

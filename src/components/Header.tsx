@@ -8,6 +8,8 @@ import { cn } from '@/lib/utils';
 
 import UnstyledLink from '@/components/links/UnstyledLink';
 
+import FlatLogo from '~/svg/FlatLogo.svg';
+
 const NavLink = ({
   href,
   children,
@@ -54,8 +56,19 @@ export default function Header() {
     <>
       <div className='fixed top-0 z-10 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md'>
         <div className='layout flex h-20 items-center justify-between'>
-          <UnstyledLink href='/' className='text-xl font-bold text-gray-900'>
+          <UnstyledLink
+            href='/'
+            className='hidden text-xl font-bold text-gray-900 md:inline-flex gap-2'
+          >
+            <FlatLogo className='h-6 w-auto' />
             Computational Design Group
+          </UnstyledLink>
+          <UnstyledLink
+            href='/'
+            className='md:hidden text-xl font-bold text-gray-900 inline-flex gap-2'
+          >
+            <FlatLogo className='h-6 w-auto' />
+            CDG
           </UnstyledLink>
           <nav className='hidden items-center space-x-1 md:flex'>
             <NavLink href='/publications'>Publications</NavLink>
