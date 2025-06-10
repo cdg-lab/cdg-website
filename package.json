@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 31417",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -18,6 +18,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@orcid/bibtex-parse-js": "^0.0.25",
+    "@retorquere/bibtex-parser": "^9.0.19",
     "clsx": "^2.0.0",
     "lucide-react": "^0.438.0",
     "next": "^14.2.23",
@@ -52,6 +54,7 @@
     "postcss": "^8.5.1",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.5.0",
+    "raw-loader": "^4.0.2",
     "tailwindcss": "^3.4.17",
     "typescript": "^4.9.5"
   },

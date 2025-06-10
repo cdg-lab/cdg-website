@@ -24,7 +24,7 @@ export default function ArrowLink<C extends React.ElementType>({
     <Component
       {...rest}
       className={cn(
-        'group gap-[0.25em]',
+        'group gap-[0.25em] inline-flex items-center',
         direction === 'left' && 'flex-row-reverse',
         className
       )}

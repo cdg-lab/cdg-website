@@ -24,6 +24,10 @@ const nextConfig = {
     );
 
     config.module.rules.push(
+      {
+        test: /\.bib$/i,
+        use: 'raw-loader',
+      },
       // Reapply the existing rule, but only for svg imports ending in ?url
       {
         ...fileLoaderRule,
