@@ -117,7 +117,7 @@ export default async function PublicationsSection({
       if (!acc[year]) {
         acc[year] = [];
       }
-      acc[year].push(publication);
+      acc[year]!.push(publication);
       return acc;
     },
     {}
