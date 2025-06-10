@@ -1,10 +1,10 @@
+import Image from 'next/image';
+
 import { peopleByLastName } from '@/data/people';
 import { type Publication, publications } from '@/data/publication';
 
-import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
 
 const Month: Record<number, string> = {
   1: 'Jan',
@@ -21,7 +21,7 @@ const Month: Record<number, string> = {
   12: 'Dec',
 };
 
-const Publication = ({ publication }: { publication: Publication }) => {
+const PublicationView = ({ publication }: { publication: Publication }) => {
   const authors = publication.authors.map((author) => {
     const parts = [];
     if (author.firstName) parts.push(author.firstName);
@@ -45,55 +45,80 @@ const Publication = ({ publication }: { publication: Publication }) => {
     : publication.year?.toString();
 
   return (
-    <div className='border-b border-gray-200 py-4'>
-      <h3 className='text-lg font-semibold text-gray-800'>
-        {publication.title}
-      </h3>
-      <p className='mt-1 text-gray-600'>
-        {authors.map((author, i) => [
-          i > 0 && ', ',
-          author.people ? (
-            <UnderlineLink href={author.people.website}>
-              {author.name}
-            </UnderlineLink>
-          ) : (
-            author.name
-          ),
-        ])}
-      </p>
-      <p className='mt-1 text-gray-600 font-light'>
-        {publication.venue && (
-          <span className='italic'>{publication.venue}</span>
-        )}
-        {publication.venue && displayYear && ', '}
-        {displayYear}
-      </p>
-      <p className='mt-2'>
-        {publication.arxiv && (
-          <ButtonLink
-            size='sm'
-            variant='light'
-            href={`https://doi.org/${publication.doi}`}
-          >
-            Arxiv
-          </ButtonLink>
-        )}
-        {publication.doi && (
-          <ButtonLink
-            size='sm'
-            variant='light'
-            href={`https://doi.org/${publication.doi}`}
-          >
-            DOI
-          </ButtonLink>
-        )}
-      </p>
+    <div className='flex flex-col md:flex-row items-start gap-4 border-gray-200 py-4'>
+      {publication.image && (
+        <Image
+          width={256}
+          height={256}
+          src={`/images/publication_preview/${publication.image}`}
+          alt={publication.title ?? ''}
+          className='flex-shrink-0 rounded-md object-contain shadow-small'
+        />
+      )}
+      <div className='flex-grow'>
+        <p className='text-lg font-semibold text-gray-800'>
+          {publication.title}
+        </p>
+        <p className='mt-1 text-gray-600'>
+          {authors.map((author, i) => [
+            i > 0 && ', ',
+            author.people ? (
+              <UnderlineLink href={author.people.website}>
+                {author.name}
+              </UnderlineLink>
+            ) : (
+              author.name
+            ),
+          ])}
+        </p>
+        <p className='mt-1 text-gray-600 font-light text-sm'>
+          {publication.venue && (
+            <span className='italic'>{publication.venue}</span>
+          )}
+          {publication.venue && displayYear && ', '}
+          {displayYear}
+        </p>
+        <p className='mt-2'>
+          {publication.arxiv && (
+            <ButtonLink
+              size='sm'
+              variant='light'
+              href={`https://doi.org/${publication.doi}`}
+            >
+              Arxiv
+            </ButtonLink>
+          )}
+          {publication.doi && (
+            <ButtonLink
+              size='sm'
+              variant='light'
+              href={`https://doi.org/${publication.doi}`}
+            >
+              DOI
+            </ButtonLink>
+          )}
+        </p>
+      </div>
     </div>
   );
 };
 
 export default function PublicationsSection() {
-  const recentPublications = publications; // .slice(0, 3);
+  const publicationsByYear = publications.reduce<Record<string, Publication[]>>(
+    (acc, publication) => {
+      const year = publication.year.toString();
+      if (!acc[year]) {
+        acc[year] = [];
+      }
+      acc[year].push(publication);
+      return acc;
+    },
+    {}
+  );
+
+  const sortedYears = Object.keys(publicationsByYear).sort((a, b) => {
+    return Number(b) - Number(a);
+  });
 
   return (
     <section id='publications' className='py-20'>
@@ -101,16 +126,23 @@ export default function PublicationsSection() {
         <h2 className='mb-12 text-center text-3xl font-bold text-gray-900'>
           Publications
         </h2>
-        <div className='mx-auto max-w-4xl'>
-          {recentPublications.map((p) => (
-            <Publication key={p.doi} publication={p} />
+        <div className='mx-auto'>
+          {sortedYears.map((year) => (
+            <div key={year} className='mt-12 first:mt-0'>
+              <h3 className='mb-2 pt-4 text-3xl font-semibold text-gray-400 text-right border-t border-gray-200'>
+                {year}
+              </h3>
+              {publicationsByYear[year]?.map((p) => (
+                <PublicationView key={p.doi} publication={p} />
+              ))}
+            </div>
           ))}
         </div>
-        <div className='mt-8 text-center'>
+        {/* <div className='mt-8 text-center'>
           <ArrowLink href='/publications' as={UnstyledLink}>
             View all publications
           </ArrowLink>
-        </div>
+        </div> */}
       </div>
     </section>
   );
