@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-import { type Profile, peopleByLastName } from '@/data/people';
+import { peopleByLastName } from '@/data/people';
 import { type Publication, publications } from '@/data/publication';
 
 import ArrowLink from '@/components/links/ArrowLink';
@@ -24,13 +24,7 @@ const Month: Record<number, string> = {
   12: 'Dec',
 };
 
-const PublicationView = ({
-  publication,
-  peopleByLastName,
-}: {
-  publication: Publication;
-  peopleByLastName: Record<string, Profile>;
-}) => {
+const PublicationView = ({ publication }: { publication: Publication }) => {
   const authors = publication.authors.map((author) => {
     const parts = [];
     if (author.firstName) parts.push(author.firstName);
@@ -70,13 +64,13 @@ const PublicationView = ({
         </p>
         <p className='mt-1 text-gray-600'>
           {authors.map((author, i) => [
-            i > 0 && ', ',
+            i > 0 && <span key={i}>{', '}</span>,
             author.people ? (
-              <UnderlineLink href={author.people.website}>
+              <UnderlineLink href={author.people.website} key={author.name}>
                 {author.name}
               </UnderlineLink>
             ) : (
-              author.name
+              <span key={author.name}>{author.name}</span>
             ),
           ])}
         </p>
@@ -147,7 +141,6 @@ export default async function PublicationsSection({
                   <PublicationView
                     key={publication.doi}
                     publication={publication}
-                    peopleByLastName={peopleByLastName}
                   />
                 ))
             : sortedYears.map((year) => (
@@ -156,11 +149,7 @@ export default async function PublicationsSection({
                     {year}
                   </h3>
                   {publicationsByYear[year]?.map((p) => (
-                    <PublicationView
-                      key={p.doi}
-                      publication={p}
-                      peopleByLastName={peopleByLastName}
-                    />
+                    <PublicationView key={p.doi} publication={p} />
                   ))}
                 </div>
               ))}

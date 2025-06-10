@@ -1,5 +1,6 @@
 'use client';
 
+import { Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import * as React from 'react';
 
@@ -30,18 +31,62 @@ const NavLink = ({
 };
 
 export default function Header() {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const pathname = usePathname();
+
+  React.useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  React.useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   return (
-    <header className='fixed top-0 z-10 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md'>
-      <div className='layout flex h-20 items-center justify-between'>
-        <UnstyledLink href='/' className='text-xl font-bold text-gray-900'>
-          Computational Design Group
-        </UnstyledLink>
-        <nav className='hidden items-center space-x-1 md:flex'>
-          <NavLink href='/publications'>Publications</NavLink>
-          <NavLink href='/team'>Team</NavLink>
-          <NavLink href='/news'>News</NavLink>
+    <>
+      <div className='fixed top-0 z-10 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md'>
+        <div className='layout flex h-20 items-center justify-between'>
+          <UnstyledLink href='/' className='text-xl font-bold text-gray-900'>
+            Computational Design Group
+          </UnstyledLink>
+          <nav className='hidden items-center space-x-1 md:flex'>
+            <NavLink href='/publications'>Publications</NavLink>
+            <NavLink href='/team'>Team</NavLink>
+            <NavLink href='/news'>News</NavLink>
+          </nav>
+          <button
+            className='z-50 md:hidden'
+            onClick={() => setIsOpen((o) => !o)}
+            aria-label='Open menu'
+          >
+            {isOpen ? <X /> : <Menu />}
+          </button>
+        </div>
+      </div>
+
+      <div
+        className={cn(
+          'fixed top-0 left-0 h-screen w-full bg-white/80 pt-40 backdrop-blur-md transition-opacity duration-300 ease-in-out md:hidden',
+          isOpen ? 'opacity-100' : 'invisible opacity-0'
+        )}
+        onClick={() => setIsOpen(false)}
+      >
+        <nav>
+          <div className='layout flex flex-col items-center space-y-4 py-4 text-lg'>
+            <NavLink href='/publications'>Publications</NavLink>
+            <NavLink href='/team'>Team</NavLink>
+            <NavLink href='/news'>News</NavLink>
+          </div>
         </nav>
       </div>
-    </header>
+    </>
   );
 }
