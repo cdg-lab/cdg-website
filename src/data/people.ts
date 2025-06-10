@@ -1,9 +1,16 @@
+export type Position =
+  | 'Principal Investigator'
+  | 'Postdoctoral Researcher'
+  | 'PhD Student'
+  | 'Former PhD Student';
+
 export type Profile = {
   firstNames: string[];
   lastName: string;
-  position: string;
+  position: Position;
   image: string;
   joined: number;
+  until?: number;
   website: string;
 };
 
@@ -13,7 +20,7 @@ export const people: Profile[] = [
     lastName: 'Schulz',
     position: 'Principal Investigator',
     image: 'profile/adriana.jpg',
-    joined: 2018,
+    joined: 2014,
     website: 'https://homes.cs.washington.edu/~adriana/',
   },
   {
@@ -68,7 +75,7 @@ export const people: Profile[] = [
     firstNames: ['Dan'],
     lastName: 'Cascaval',
     position: 'PhD Student',
-    image: 'profile/blank.jpg',
+    image: 'profile/dan.jpg',
     joined: 2018,
     website: 'https://dan.cascaval.us/',
   },
@@ -78,17 +85,32 @@ export const people: Profile[] = [
     position: 'Former PhD Student',
     image: 'profile/james.jpg',
     joined: 2018,
+    until: 2024,
     website: 'https://james.noeckel.com/',
   },
   {
     firstNames: ['Benjamin', 'Benjamin T.'],
     lastName: 'Jones',
     position: 'Former PhD Student',
-    image: 'profile/blank.jpg',
+    image: 'profile/ben.jpg',
     joined: 2018,
+    until: 2024,
     website: 'https://bentodjones.com/',
   },
 ];
+
+const POSITION_ORDER = {
+  'Principal Investigator': 0,
+  'Postdoctoral Researcher': 1,
+  'PhD Student': 2,
+  'Former PhD Student': 3,
+} as const;
+
+people.sort((a, b) => {
+  if (POSITION_ORDER[a.position] != POSITION_ORDER[b.position])
+    return POSITION_ORDER[a.position] - POSITION_ORDER[b.position];
+  return a.joined - b.joined;
+});
 
 export const peopleByLastName = people.reduce((acc, person) => {
   acc[person.lastName.toLowerCase()] = person;
