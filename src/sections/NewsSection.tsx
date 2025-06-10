@@ -1,6 +1,9 @@
+'use server';
+
 import { type News, news } from '@/data/news';
 
 import ArrowLink from '@/components/links/ArrowLink';
+import ButtonLink from '@/components/links/ButtonLink';
 
 function NewsItem({ item }: { item: News }) {
   return (
@@ -25,18 +28,30 @@ function NewsItem({ item }: { item: News }) {
   );
 }
 
-export default function NewsSection() {
+export default async function NewsSection({
+  showRecent,
+}: {
+  showRecent?: boolean;
+}) {
+  const newsToShow = showRecent ? news.slice(0, 3) : news;
   return (
-    <section id='news' className='py-20'>
+    <section id='news' className='py-20 bg-gray-50'>
       <div className='layout'>
         <h2 className='mb-12 text-center text-3xl font-bold text-gray-900'>
-          News
+          {showRecent ? 'Recent News' : 'News'}
         </h2>
-        <div className='mx-auto max-w-4xl space-y-8'>
-          {news.map((item) => (
+        <div className='mx-auto max-w-4xl space-y-4'>
+          {newsToShow.map((item) => (
             <NewsItem key={item.title} item={item} />
           ))}
         </div>
+        {showRecent && (
+          <div className='flex flex-col items-center mt-8'>
+            <ArrowLink as={ButtonLink} variant='light' href='/news'>
+              View All News
+            </ArrowLink>
+          </div>
+        )}
       </div>
     </section>
   );

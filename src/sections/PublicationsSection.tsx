@@ -1,8 +1,11 @@
+'use server';
+
 import Image from 'next/image';
 
-import { peopleByLastName } from '@/data/people';
+import { type Profile, peopleByLastName } from '@/data/people';
 import { type Publication, publications } from '@/data/publication';
 
+import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 
@@ -21,7 +24,13 @@ const Month: Record<number, string> = {
   12: 'Dec',
 };
 
-const PublicationView = ({ publication }: { publication: Publication }) => {
+const PublicationView = ({
+  publication,
+  peopleByLastName,
+}: {
+  publication: Publication;
+  peopleByLastName: Record<string, Profile>;
+}) => {
   const authors = publication.authors.map((author) => {
     const parts = [];
     if (author.firstName) parts.push(author.firstName);
@@ -103,7 +112,11 @@ const PublicationView = ({ publication }: { publication: Publication }) => {
   );
 };
 
-export default function PublicationsSection() {
+export default async function PublicationsSection({
+  showRecent,
+}: {
+  showRecent?: boolean;
+}) {
   const publicationsByYear = publications.reduce<Record<string, Publication[]>>(
     (acc, publication) => {
       const year = publication.year.toString();
@@ -124,25 +137,41 @@ export default function PublicationsSection() {
     <section id='publications' className='py-20'>
       <div className='layout'>
         <h2 className='mb-12 text-center text-3xl font-bold text-gray-900'>
-          Publications
+          {showRecent ? 'Recent Publications' : 'Publications'}
         </h2>
         <div className='mx-auto'>
-          {sortedYears.map((year) => (
-            <div key={year} className='mt-12 first:mt-0'>
-              <h3 className='mb-2 pt-4 text-3xl font-semibold text-gray-400 text-right border-t border-gray-200'>
-                {year}
-              </h3>
-              {publicationsByYear[year]?.map((p) => (
-                <PublicationView key={p.doi} publication={p} />
+          {showRecent
+            ? publications
+                .slice(0, 3)
+                .map((publication) => (
+                  <PublicationView
+                    key={publication.doi}
+                    publication={publication}
+                    peopleByLastName={peopleByLastName}
+                  />
+                ))
+            : sortedYears.map((year) => (
+                <div key={year} className='mt-12 first:mt-0'>
+                  <h3 className='mb-2 pt-4 text-3xl font-semibold text-gray-400 text-right border-t border-gray-200'>
+                    {year}
+                  </h3>
+                  {publicationsByYear[year]?.map((p) => (
+                    <PublicationView
+                      key={p.doi}
+                      publication={p}
+                      peopleByLastName={peopleByLastName}
+                    />
+                  ))}
+                </div>
               ))}
-            </div>
-          ))}
         </div>
-        {/* <div className='mt-8 text-center'>
-          <ArrowLink href='/publications' as={UnstyledLink}>
-            View all publications
-          </ArrowLink>
-        </div> */}
+        {showRecent && (
+          <div className='flex flex-col items-center mt-8'>
+            <ArrowLink as={ButtonLink} variant='light' href='/publications'>
+              View All Publications
+            </ArrowLink>
+          </div>
+        )}
       </div>
     </section>
   );
