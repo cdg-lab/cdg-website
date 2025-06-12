@@ -59,10 +59,10 @@ const PublicationView = ({ publication }: { publication: Publication }) => {
         />
       )}
       <div className='flex-grow'>
-        <p className='text-lg font-semibold text-gray-800'>
+        <p className='text-lg font-semibold text-stone-800'>
           {publication.title}
         </p>
-        <p className='mt-1 text-gray-600'>
+        <p className='mt-1 text-stone-600'>
           {authors.map((author, i) => [
             i > 0 && <span key={i}>{', '}</span>,
             author.people ? (
@@ -74,7 +74,7 @@ const PublicationView = ({ publication }: { publication: Publication }) => {
             ),
           ])}
         </p>
-        <p className='mt-1 text-gray-600 font-light text-sm'>
+        <p className='mt-1 text-stone-600 font-light text-sm'>
           {publication.venue && (
             <span className='italic'>{publication.venue}</span>
           )}
@@ -130,7 +130,7 @@ export default async function PublicationsSection({
   return (
     <section id='publications' className='py-20'>
       <div className='layout'>
-        <h2 className='mb-12 text-center text-3xl font-bold text-gray-900'>
+        <h2 className='mb-12 text-center text-3xl font-bold text-stone-800'>
           {showRecent ? 'Recent Publications' : 'Publications'}
         </h2>
         <div className='mx-auto'>
@@ -145,7 +145,7 @@ export default async function PublicationsSection({
                 ))
             : sortedYears.map((year) => (
                 <div key={year} className='mt-12 first:mt-0'>
-                  <h3 className='mb-2 pt-4 text-3xl font-semibold text-gray-400 text-right border-t border-gray-200'>
+                  <h3 className='mb-2 pt-4 text-3xl font-semibold text-stone-400 text-right border-t border-stone-200'>
                     {year}
                   </h3>
                   {publicationsByYear[year]?.map((p) => (

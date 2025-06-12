@@ -21,7 +21,7 @@ export const people: Profile[] = [
     position: 'Principal Investigator',
     image: 'profile/adriana.jpg',
     joined: 2014,
-    website: 'https://homes.cs.washington.edu/~adriana/',
+    website: '/adriana',
   },
   {
     firstNames: ['Felix'],

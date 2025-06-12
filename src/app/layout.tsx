@@ -63,7 +63,7 @@ export default function RootLayout({
           <Header />
 
           <div className='pt-20'>{children}</div>
-          <footer className='bg-stone-600 py-12 text-white'>
+          <footer className='bg-stone-200 py-12 text-stone-600'>
             <div className='layout text-center'>
               <p>
                 &copy; {new Date().getFullYear()} Computational Design Group at

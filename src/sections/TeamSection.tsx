@@ -22,16 +22,15 @@ const TeamMember = ({ person }: { person: Profile }) => {
           />
         </div>
       </Link>
-      <UnderlineLink
-        href={person.website}
-        className='text-xl font-semibold text-gray-800'
-      >
+      <UnderlineLink href={person.website} className='text-xl font-semibold'>
         {name}
       </UnderlineLink>
-      <p className='text-gray-600 mt-2'>{person.position}</p>
-      <p className='text-gray-500 text-sm mt-1 font-light'>
-        {`${person.joined} – ${person.until ?? 'Present'}`}
-      </p>
+      <p className='text-stone-600 mt-2'>{person.position}</p>
+      {person.firstNames[0] !== 'Adriana' && (
+        <p className='text-stone-500 text-sm mt-1 font-light'>
+          {`${person.joined} – ${person.until ?? 'Present'}`}
+        </p>
+      )}
     </div>
   );
 };
@@ -47,7 +46,7 @@ export default function TeamSection({
   return (
     <section id='team' className='py-20'>
       <div className='layout'>
-        <h2 className='mb-12 text-center text-3xl font-bold text-gray-900'>
+        <h2 className='mb-12 text-center text-3xl font-bold text-stone-800'>
           {showCurrent ? 'Current Members' : 'Meet the Team'}
         </h2>
         <div className='mx-auto grid max-w-5xl grid-cols-2 gap-8 md:grid-cols-4'>

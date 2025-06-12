@@ -20,8 +20,7 @@ export default function HeroSection() {
         <p className='mx-auto mt-4 max-w-3xl text-lg text-stone-500'>
           Investigating problems in digital fabrication and computer graphics.
           <br />
-          Led by{' '}
-          <UnderlineLink href='https://vivo.brown.edu/display/aschulz4'>
+          Led by <UnderlineLink href='/adriana'>
             Adriana Schulz
           </UnderlineLink>{' '}
           at Brown University.

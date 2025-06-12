@@ -8,7 +8,7 @@ import ButtonLink from '@/components/links/ButtonLink';
 function NewsItem({ item }: { item: News }) {
   return (
     <div className='border-b pb-4'>
-      <p className='text-sm text-gray-500'>
+      <p className='text-sm text-stone-500'>
         {item.date.toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'long',
@@ -17,10 +17,10 @@ function NewsItem({ item }: { item: News }) {
       </p>
       <h3 className='mt-1 text-xl font-semibold'>{item.title}</h3>
       {item.content && (
-        <p className='mt-2 text-gray-600 text-sm'>{item.content}</p>
+        <p className='mt-2 text-stone-600 text-sm'>{item.content}</p>
       )}
       {item.link && (
-        <ArrowLink className='mt-2 text-sm text-gray-600' href={item.link}>
+        <ArrowLink className='mt-2 text-sm text-stone-600' href={item.link}>
           Source
         </ArrowLink>
       )}
@@ -37,7 +37,7 @@ export default async function NewsSection({
   return (
     <section id='news' className='py-20 bg-stone-50'>
       <div className='layout'>
-        <h2 className='mb-12 text-center text-3xl font-bold text-gray-900'>
+        <h2 className='mb-12 text-center text-3xl font-bold text-stone-800'>
           {showRecent ? 'Recent News' : 'News'}
         </h2>
         <div className='mx-auto max-w-4xl space-y-4'>

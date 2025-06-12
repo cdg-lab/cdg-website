@@ -23,8 +23,8 @@ const NavLink = ({
     <UnstyledLink
       href={href}
       className={cn(
-        'rounded-md px-4 py-2 font-light text-gray-600 hover:text-gray-900',
-        isActive && 'font-semibold text-gray-900'
+        'rounded-md px-4 py-2 font-light text-stone-600 hover:text-stone-900',
+        isActive && 'font-semibold text-stone-900'
       )}
     >
       {children}
@@ -58,14 +58,14 @@ export default function Header() {
         <div className='layout flex h-20 items-center justify-between'>
           <UnstyledLink
             href='/'
-            className='hidden text-xl font-bold text-gray-900 md:inline-flex gap-2'
+            className='hidden text-xl font-bold text-stone-800 md:inline-flex gap-2'
           >
             <FlatLogo className='h-6 w-auto' />
             Computational Design Group
           </UnstyledLink>
           <UnstyledLink
             href='/'
-            className='md:hidden text-xl font-bold text-gray-900 inline-flex gap-2'
+            className='md:hidden text-xl font-bold text-stone-800 inline-flex gap-2'
           >
             <FlatLogo className='h-6 w-auto' />
             CDG
