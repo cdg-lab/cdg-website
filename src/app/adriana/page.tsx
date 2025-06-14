@@ -1,9 +1,14 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 import ReactMarkdown, { Components } from 'react-markdown';
 
 import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
+
+export const metadata: Metadata = {
+  title: 'Adriana Schulz',
+};
 
 const content = `
 I am an assistant professor at the [Paul G. Allen School of Computer Science & Engineering](https://www.cs.washington.edu/) at the [University of Washington](https://www.washington.edu/), where I am a member of the Computer Graphics Group ([GRAIL](https://grail.cs.washington.edu/)). I am also co-director of the Digital Fabrication Center at UW ([DFab](https://dfab.uw.edu/)) and the director of [WiGRAPH](https://www.wigraph.org/).
