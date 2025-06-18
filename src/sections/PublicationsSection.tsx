@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { peopleByLastName } from '@/data/people';
 import { type Publication, publications } from '@/data/publication';
 
+import BibtexButton from '@/components/buttons/BibtexButton';
 import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
@@ -32,7 +33,7 @@ const PublicationView = ({ publication }: { publication: Publication }) => {
     const name = parts.length > 0 ? parts.join(' ') : author.name;
     const peopleCandidate =
       author.lastName !== undefined
-        ? peopleByLastName[author.lastName.toLowerCase()]
+        ? peopleByLastName[author.lastName.toLowerCase().normalize()]
         : undefined;
     const people = peopleCandidate?.firstNames.includes(author.firstName ?? '')
       ? peopleCandidate
@@ -81,7 +82,22 @@ const PublicationView = ({ publication }: { publication: Publication }) => {
           {publication.venue && displayYear && ', '}
           {displayYear}
         </p>
-        <p className='mt-2'>
+        <p className='mt-2 flex flex-row gap-2'>
+          {publication.www && (
+            <ButtonLink size='sm' variant='light' href={publication.www}>
+              Project Page
+            </ButtonLink>
+          )}
+          {publication.pdf && (
+            <ButtonLink size='sm' variant='light' href={publication.pdf}>
+              PDF
+            </ButtonLink>
+          )}
+          {publication.video && (
+            <ButtonLink size='sm' variant='light' href={publication.video}>
+              Video
+            </ButtonLink>
+          )}
           {publication.arxiv && (
             <ButtonLink
               size='sm'
@@ -99,6 +115,13 @@ const PublicationView = ({ publication }: { publication: Publication }) => {
             >
               DOI
             </ButtonLink>
+          )}
+          {publication.bibtex && (
+            <BibtexButton
+              size='sm'
+              variant='light'
+              bibtex={publication.bibtex}
+            />
           )}
         </p>
       </div>
@@ -120,7 +143,7 @@ export default async function PublicationsSection({
       acc[year]!.push(publication);
       return acc;
     },
-    {}
+    {},
   );
 
   const sortedYears = Object.keys(publicationsByYear).sort((a, b) => {

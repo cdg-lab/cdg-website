@@ -24,7 +24,7 @@ const NavLink = ({
       href={href}
       className={cn(
         'rounded-md px-4 py-2 font-light text-stone-600 hover:text-stone-900',
-        isActive && 'font-semibold text-stone-900'
+        isActive && 'font-semibold text-stone-900',
       )}
     >
       {children}
@@ -88,7 +88,7 @@ export default function Header() {
       <div
         className={cn(
           'fixed top-0 left-0 h-screen w-full bg-white/80 pt-40 backdrop-blur-md transition-opacity duration-300 ease-in-out md:hidden',
-          isOpen ? 'opacity-100' : 'invisible opacity-0'
+          isOpen ? 'opacity-100' : 'invisible opacity-0',
         )}
         onClick={() => setIsOpen(false)}
       >

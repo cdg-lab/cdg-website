@@ -112,7 +112,10 @@ people.sort((a, b) => {
   return a.joined - b.joined;
 });
 
-export const peopleByLastName = people.reduce((acc, person) => {
-  acc[person.lastName.toLowerCase()] = person;
-  return acc;
-}, {} as Record<string, Profile>);
+export const peopleByLastName = people.reduce(
+  (acc, person) => {
+    acc[person.lastName.toLowerCase()] = person;
+    return acc;
+  },
+  {} as Record<string, Profile>,
+);
