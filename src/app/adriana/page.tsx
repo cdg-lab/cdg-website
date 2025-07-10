@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const content = `
-I am an assistant professor at the [Paul G. Allen School of Computer Science & Engineering](https://www.cs.washington.edu/) at the [University of Washington](https://www.washington.edu/), where I am a member of the Computer Graphics Group ([GRAIL](https://grail.cs.washington.edu/)). I am also co-director of the Digital Fabrication Center at UW ([DFab](https://dfab.uw.edu/)) and the director of [WiGRAPH](https://www.wigraph.org/).
+I am an Associate Professor of [Computer Science](https://cs.brown.edu/) at [Brown University](https://brown.edu/) and a member of the [Brown Visual Computing](https://visual.cs.brown.edu/) group. I am also an affiliate faculty at the [Paul G. Allen School of Computer Science & Engineering](https://www.cs.washington.edu/) at the [University of Washington](https://www.washington.edu/) and the chair of [WiGRAPH](https://www.wigraph.org/).
 
 My research group creates design tools and systems that will revolutionize how we build physical artifacts. A central challenge for design tools in manufacturing is the need to simultaneously nurture the creative ability to conceive novel designs and the analytical capacity to critically evaluate and optimize functionality and production. My group tackles this challenge through innovative solutions that are grounded in the fundamentals of geometry processing and combine insights from machine learning and programming languages.
 
@@ -28,7 +28,7 @@ const content2 = `
 
 ## Bio
 
-I received my Ph.D. degree in June 2018 from the Computer Science Department at MIT, where I was advised by Professor [Wojciech Matusik](https://homes.cs.washington.edu/~adriana/http%20/%3E/graphics.csail.mit.edu/%7Ewojciech/). During my PhD, I spent time at Columbia University working with Professor [Eitan Grinspun](http://www.cs.columbia.edu/~eitan/), and, at MIT, I also worked closely with [Daniela Rus](http://danielarus.csail.mit.edu/), developing computational tools for robot design. Before starting my PhD, I obtained a Master's in Mathematics from [IMPA](http://www.impa.br/), where I worked with Professor [Luiz Velho](http://www.impa.br/%7Elvelho) and a Bachelor in Electronics Engineering from [UFRJ](http://www.impa.br/), where I worked with Professor [Eduardo da Silva](http://www.impa.br/).
+I grew up in Brazil, where I earned a Bachelor's degree in Electronics Engineering from [UFRJ](http://www.impa.br/) and a Master's in Mathematics from [IMPA](http://www.impa.br/). I completed my Ph.D. in Computer Science at [MIT](https://www.csail.mit.edu/) in 2018. After that, I spent several wonderful years at the [University of Washington](https://www.cs.washington.edu/), where I served as an Assistant Professor of Computer Science and was later promoted to Associate Professor with tenure. I joined [Brown University](https://brown.edu) in 2025.
 ` as const;
 
 const components: Components = {
@@ -62,13 +62,9 @@ export default function Page() {
                 />
               </div>
               <div className='text-sm text-stone-700 space-y-1 text-center md:text-left'>
-                <div>Assistant Professor</div>
-                <div>University of Washington</div>
-                <div>
-                  Paul G. Allen School of Computer Science & Engineering
-                </div>
-                <div>Office: CSE2 209 (Gates Center)</div>
-                <div>adriana [at] cs.washington.edu</div>
+                <div>Associate Professor</div>
+                <div>Brown University</div>
+                <div>adriana_schulz [at] brown.edu</div>
               </div>
             </div>
           </div>

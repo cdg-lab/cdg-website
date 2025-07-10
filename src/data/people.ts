@@ -2,7 +2,9 @@ export type Position =
   | 'Principal Investigator'
   | 'Postdoctoral Researcher'
   | 'PhD Student'
-  | 'Former PhD Student';
+  | 'Former PhD Student'
+  | 'Former Visiting Student'
+  | 'Former Postdoctoral Researcher';
 
 export type Profile = {
   firstNames: string[];
@@ -42,9 +44,10 @@ export const people: Profile[] = [
   {
     firstNames: ['Yuxuan'],
     lastName: 'Mei',
-    position: 'PhD Student',
+    position: 'Former PhD Student',
     image: 'profile/yuxuan.jpg',
     joined: 2018,
+    until: 2025,
     website: 'https://homes.cs.washington.edu/~ym2552/',
   },
   {
@@ -97,6 +100,33 @@ export const people: Profile[] = [
     until: 2024,
     website: 'https://bentodjones.com/',
   },
+  {
+    firstNames: ['Haisen'],
+    lastName: 'Zhao',
+    position: 'Former Postdoctoral Researcher',
+    joined: 2019,
+    until: 2021,
+    website: 'https://haisenzhao.github.io/',
+    image: 'profile/haisen.jpg',
+  },
+  {
+    firstNames: ['Dalton'],
+    lastName: 'Hildreth',
+    position: 'Former PhD Student',
+    joined: 2019,
+    until: 2021,
+    website: 'https://www.linkedin.com/in/dalton-hildreth/',
+    image: 'profile/dalton.jpg',
+  },
+  {
+    firstNames: ['Chenming'],
+    lastName: 'Wu',
+    position: 'Former PhD Student',
+    joined: 2019,
+    until: 2019,
+    website: 'https://chenming-wu.github.io/',
+    image: 'profile/chenming.jpg',
+  },
 ];
 
 const POSITION_ORDER = {
@@ -104,9 +134,13 @@ const POSITION_ORDER = {
   'Postdoctoral Researcher': 1,
   'PhD Student': 2,
   'Former PhD Student': 3,
+  'Former Postdoctoral Researcher': 3,
+  'Former Visiting Student': 3,
 } as const;
 
 people.sort((a, b) => {
+  if (a.until !== undefined && b.until !== undefined && a.until !== b.until)
+    return a.until - b.until;
   if (POSITION_ORDER[a.position] != POSITION_ORDER[b.position])
     return POSITION_ORDER[a.position] - POSITION_ORDER[b.position];
   return a.joined - b.joined;

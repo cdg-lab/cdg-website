@@ -3,6 +3,7 @@ export type News = {
   date: Date;
   content?: string;
   link?: string;
+  image?: string;
 };
 
 export const news: News[] = [
@@ -33,6 +34,23 @@ export const news: News[] = [
     title: 'James Noeckel Defends PhD Thesis',
     content:
       'Congratulations to James Noeckel on defending his PhD thesis titled: "Fabrication-Aware Reconstruction". He is joining Apple as a graphics software engineer.',
+  },
+  {
+    date: new Date('2025-05-14'),
+    title: 'Yuxuan Mei Defends PhD Thesis',
+    content:
+      'Congratulations to Yuxuan Mei on defending his PhD thesis titled: "Design for Sustainable Fabrication". She is joining Wesleyan University as an Assistant Professor.',
+  },
+  {
+    date: new Date('2025-06-05'),
+    title: 'Adriana Schulz Named 2025 CRA Anita Borg Early Career Award Winner',
+    link: 'https://cra.org/crn/2025/06/cra-early-career-awards-adriana-schulz-named-2025-cra-anita-borg-early-career-award-recipient/',
+  },
+  {
+    date: new Date('2025-07-03'),
+    title: 'Adriana Schulz Gave a Keynote at SGP 2025',
+    link: 'https://sgp2025.my.canva.site/program-page-sgp',
+    image: 'sgp2025.jpg',
   },
 ];
 

@@ -11,20 +11,22 @@ import Logo from '~/svg/MainLogo.svg';
 
 export default function HeroSection() {
   return (
-    <section className='flex min-h-[60vh] items-center bg-gradient-to-b from-stone-50 to-stone-100'>
-      <div className='layout flex flex-col text-center items-center py-16'>
-        <Logo className='w-[300px]' />
-        <h1 className='text-4xl font-bold leading-tight text-stone-600 md:text-5xl mt-2'>
-          Computational Design Group (CDG)
-        </h1>
-        <p className='mx-auto mt-4 max-w-3xl text-lg text-stone-500'>
-          Investigating problems in digital fabrication and computer graphics.
-          <br />
-          Led by <UnderlineLink href='/adriana'>
-            Adriana Schulz
-          </UnderlineLink>{' '}
-          at Brown University.
-        </p>
+    <section className='flex items-center bg-gradient-to-b from-stone-50 to-stone-100'>
+      <div className='layout flex flex-col md:flex-row items-center justify-center py-8 gap-4'>
+        <Logo className='w-[128px] md:w-[256px]' />
+        <div className='text-center md:text-left'>
+          <h1 className='text-3xl md:text-4xl font-bold leading-tight text-stone-600 mt-2'>
+            Computational Design Group (CDG)
+          </h1>
+          <p className='mt-4 text-stone-500'>
+            Investigating problems in digital fabrication and computer graphics.
+            <br />
+            Led by <UnderlineLink href='/adriana'>
+              Adriana Schulz
+            </UnderlineLink>{' '}
+            at Brown University.
+          </p>
+        </div>
       </div>
     </section>
   );

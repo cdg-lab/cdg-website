@@ -40,20 +40,31 @@ export default function TeamSection({
 }: {
   showCurrent?: boolean;
 }) {
-  const filteredPeople = showCurrent
-    ? people.filter((person) => person.until === undefined)
-    : people;
+  const currentPeople = people.filter((person) => person.until === undefined);
+  const alumni = people.filter((person) => person.until !== undefined);
   return (
     <section id='team' className='py-20'>
       <div className='layout'>
         <h2 className='mb-12 text-center text-3xl font-bold text-stone-800'>
           {showCurrent ? 'Current Members' : 'Meet the Team'}
         </h2>
-        <div className='mx-auto grid max-w-5xl grid-cols-2 gap-8 md:grid-cols-4'>
-          {filteredPeople.map((person) => (
+        <div className='grid max-w-5xl grid-cols-2 gap-8 md:grid-cols-4'>
+          {currentPeople.map((person) => (
             <TeamMember key={person.lastName} person={person} />
           ))}
         </div>
+        {!showCurrent && (
+          <div>
+            <h2 className='mt-20 mb-12 text-3xl font-bold text-stone-600'>
+              Alumni
+            </h2>
+            <div className='grid max-w-5xl grid-cols-2 gap-8 md:grid-cols-4'>
+              {alumni.map((person) => (
+                <TeamMember key={person.lastName} person={person} />
+              ))}
+            </div>
+          </div>
+        )}
         {showCurrent && (
           <div className='flex flex-col items-center mt-12'>
             <ArrowLink as={ButtonLink} variant='light' href='/team'>
