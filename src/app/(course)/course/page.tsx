@@ -1,7 +1,8 @@
+import { DownloadIcon } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 
-import { courseInfo } from '@/data/course';
+import { announcements, courseInfo, importantDates } from '@/data/course';
 
 import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
@@ -22,77 +23,55 @@ export default function CoursePage() {
 
           <div className='mt-8 grid gap-8 md:grid-cols-3'>
             <div className='md:col-span-2'>
-              <div className='rounded-lg bg-white p-6 shadow-sm'>
+              <div className='rounded-lg bg-white px-2 py-6 md:px-6 shadow-small'>
                 <h2 className='mb-4 text-2xl font-semibold text-stone-800'>
                   Course Overview
                 </h2>
                 <p className='text-stone-600 leading-relaxed'>
                   {courseInfo.description}
                 </p>
-
-                <div className='mt-6'>
-                  <h3 className='mb-2 text-lg font-semibold text-stone-800'>
-                    Prerequisites
-                  </h3>
-                  <ul className='list-inside list-disc space-y-1 text-stone-600'>
-                    {courseInfo.prerequisites.map((prereq, idx) => (
-                      <li key={idx}>{prereq}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className='mt-6'>
-                  <h3 className='mb-2 text-lg font-semibold text-stone-800'>
-                    Topics Covered
-                  </h3>
-                  <div className='grid grid-cols-2 gap-2 text-stone-600'>
-                    <ul className='list-inside list-disc space-y-1'>
-                      <li>Geometry Processing</li>
-                      <li>Mesh Algorithms</li>
-                      <li>Parametric Design</li>
-                      <li>Physical Simulation</li>
-                    </ul>
-                    <ul className='list-inside list-disc space-y-1'>
-                      <li>Design Optimization</li>
-                      <li>Fabrication Planning</li>
-                      <li>Machine Learning for Design</li>
-                      <li>Interactive Design Tools</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
 
-              <div className='mt-6 rounded-lg bg-white p-6 shadow-sm'>
+              <div className='mt-6 rounded-lg bg-white px-2 py-6 md:px-6 shadow-small'>
                 <h2 className='mb-4 text-2xl font-semibold text-stone-800'>
                   Recent Announcements
                 </h2>
                 <div className='space-y-4'>
-                  <div className='border-l-4 border-blue-500 pl-4'>
-                    <p className='text-sm text-stone-500'>January 15, 2025</p>
-                    <p className='font-medium text-stone-800'>
-                      Welcome to CSE556!
-                    </p>
-                    <p className='mt-1 text-stone-600'>
-                      Course website is now live. Please review the syllabus and
-                      course schedule.
-                    </p>
-                  </div>
-                  <div className='border-l-4 border-stone-300 pl-4'>
-                    <p className='text-sm text-stone-500'>January 10, 2025</p>
-                    <p className='font-medium text-stone-800'>
-                      First Day of Class
-                    </p>
-                    <p className='mt-1 text-stone-600'>
-                      Our first class will be on January 22. Looking forward to
-                      seeing you all!
-                    </p>
-                  </div>
+                  {announcements.map((announcement) => (
+                    <div
+                      key={announcement.id}
+                      className={`border-l-4 pl-4 ${
+                        announcement.priority === 'high'
+                          ? 'border-blue-500'
+                          : 'border-stone-300'
+                      }`}
+                    >
+                      <p className='text-sm text-stone-500'>
+                        {announcement.date}
+                      </p>
+                      <p className='font-medium text-stone-800'>
+                        {announcement.title}
+                      </p>
+                      <p className='mt-1 text-stone-600'>
+                        {announcement.content}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
 
             <div>
-              <div className='rounded-lg bg-white p-6 shadow-sm'>
+              <div className=''>
+                <Image
+                  src='/images/robogami.png'
+                  alt='Computational Design Example'
+                  width={1200}
+                  height={400}
+                  className='w-full rounded-lg shadow-small'
+                />
+              </div>
+              <div className='mt-6 rounded-lg bg-white px-2 py-6 md:px-6 shadow-small'>
                 <h2 className='mb-4 text-xl font-semibold text-stone-800'>
                   Course Logistics
                 </h2>
@@ -114,23 +93,28 @@ export default function CoursePage() {
                     </p>
                   </div>
                   <div>
+                    <p className='font-medium text-stone-700'>TA</p>
+                    <p>{courseInfo.ta}</p>
+                  </div>
+                  <div>
                     <p className='font-medium text-stone-700'>Office Hours</p>
                     <p>{courseInfo.officeHours}</p>
                   </div>
                 </div>
               </div>
 
-              <div className='mt-6 rounded-lg bg-white p-6 shadow-sm'>
+              <div className='mt-6 rounded-lg bg-white px-2 py-6 md:px-6 shadow-small'>
                 <h2 className='mb-4 text-xl font-semibold text-stone-800'>
                   Quick Links
                 </h2>
                 <div className='space-y-2'>
                   <ButtonLink
-                    href='/course/syllabus'
-                    className='w-full justify-center'
+                    href='/assets/course/SyllabusWinter2025556.pdf'
+                    className='w-full justify-center gap-2'
                     variant='outline'
                   >
-                    View Syllabus
+                    <DownloadIcon className='h-4 w-4' />
+                    Syllabus [PDF]
                   </ButtonLink>
                   <ButtonLink
                     href='https://edstem.org/'
@@ -149,32 +133,19 @@ export default function CoursePage() {
                 </div>
               </div>
 
-              <div className='mt-6 rounded-lg bg-blue-50 p-6'>
+              <div className='mt-6 rounded-lg bg-blue-50 px-2 py-6 md:px-6 shadow-small'>
                 <h3 className='mb-2 text-lg font-semibold text-blue-900'>
                   Important Dates
                 </h3>
                 <ul className='space-y-1 text-sm text-blue-800'>
-                  <li>Jan 22: First Day of Class</li>
-                  <li>Mar 7: Midterm Exam</li>
-                  <li>Mar 19: Project Proposal Due</li>
-                  <li>Apr 25: Final Project Due</li>
+                  {importantDates.map((date) => (
+                    <li key={date.id}>
+                      {date.date}: {date.description}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
-          </div>
-
-          <div className='mt-8'>
-            <Image
-              src='/images/robogami.png'
-              alt='Computational Design Example'
-              width={1200}
-              height={400}
-              className='w-full rounded-lg shadow-md'
-            />
-            <p className='mt-2 text-center text-sm text-stone-500'>
-              Example of computational design: Interactive robogami design and
-              fabrication
-            </p>
           </div>
         </div>
       </section>

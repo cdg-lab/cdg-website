@@ -3,47 +3,36 @@ export interface CourseInfo {
   title: string;
   term: string;
   instructor: string;
+  ta: string;
   time: string;
   location: string;
   officeHours: string;
   description: string;
-  prerequisites: string[];
 }
 
-export interface StaffMember {
-  name: string;
-  role: string;
-  email: string;
-  officeHours?: string;
-  office?: string;
-  imageUrl?: string;
+export interface Announcement {
+  id: string;
+  date: string;
+  title: string;
+  content: string;
+  priority?: 'high' | 'normal' | 'low';
+}
+
+export interface ImportantDate {
+  id: string;
+  date: string;
+  description: string;
+}
+
+export interface ScheduleEntryLink {
+  label: string;
+  href: string;
 }
 
 export interface ScheduleEntry {
-  week: number;
   date: string;
   topic: string;
-  readings?: string[];
-  assignments?: string[];
-  notes?: string;
-}
-
-export interface Assignment {
-  id: string;
-  title: string;
-  dueDate: string;
-  description: string;
-  points?: number;
-  resources?: string[];
-  submissionLink?: string;
-}
-
-export interface Resource {
-  category: string;
-  title: string;
-  description?: string;
-  url?: string;
-  type: 'pdf' | 'link' | 'video' | 'book';
+  links?: ScheduleEntryLink[];
 }
 
 export const courseInfo: CourseInfo = {
@@ -51,312 +40,151 @@ export const courseInfo: CourseInfo = {
   title: 'Computational Design and Fabrication',
   term: 'Spring 2025',
   instructor: 'Adriana Schulz',
+  ta: 'Jack Zhang',
   time: 'Monday/Wednesday, 10:00-11:20am',
   location: 'CIT 241',
   officeHours: 'Wednesday 2:00-3:00pm or by appointment',
-  description: `This course introduces students to the fundamental concepts of computational design and fabrication. 
-    We will explore algorithms and mathematical foundations underlying these topics, including geometry processing, 
-    physical simulation, optimization, and interaction techniques. Students will gain hands-on experience with 
-    both theoretical concepts and practical applications in digital fabrication.`,
-  prerequisites: [
-    'CSCI 0330 or CSCI 0300 (Introduction to Computer Systems)',
-    'CSCI 0320 or CSCI 0160 (Introduction to Software Engineering)',
-    'Basic linear algebra and calculus',
-  ],
+  description: `This course introduces students to the new and exciting field of computational design and fabrication, which is currently laying the foundations on which the next generation of manufacturing workflows and systems will be built. The focus of this course is the algorithms and mathematical fundamentals for supporting computational design. The majority of the course will be around computational techniques, however we will also discuss fabrication hardware and workflow. Students are not expected to have any experience with fabrication but we will require a mathematical and computer science background (such as linear algebra, geometry, and algorithmic analysis). Topics include concepts of geometry processing fundamentals, hardware abstraction languages, physics-based simulation, optimization techniques, and data-driven generative modeling.`,
 };
-
-export const staff: StaffMember[] = [
-  {
-    name: 'Adriana Schulz',
-    role: 'Instructor',
-    email: 'adriana_schulz@brown.edu',
-    officeHours: 'Wednesday 2:00-3:00pm',
-    office: 'CIT 543',
-  },
-  {
-    name: 'Teaching Assistant',
-    role: 'TA',
-    email: 'ta_cse556@brown.edu',
-    officeHours: 'Tuesday 3:00-5:00pm',
-    office: 'CIT 201',
-  },
-];
 
 export const schedule: ScheduleEntry[] = [
   {
-    week: 1,
+    date: '01/06/25',
+    topic: 'Course Overview',
+    links: [
+      { label: 'Notes', href: '/notes/lecture01.pdf' },
+      { label: 'Slides', href: '/slides/lecture01.pdf' },
+    ],
+  },
+  {
+    date: '01/08/25',
+    topic: 'Design Representations Part 1: Data Structures',
+    links: [{ label: 'Slides', href: '/slides/lecture02.pdf' }],
+  },
+  {
+    date: '01/13/25',
+    topic: 'Design Representations Part 2: More on Data Structures',
+    links: [{ label: 'Slides', href: '/slides/lecture03.pdf' }],
+  },
+  {
+    date: '01/15/25',
+    topic: 'Design Representations Part 3: Programs',
+    links: [
+      { label: 'Slides', href: '/slides/lecture04.pdf' },
+      { label: 'Project ideas', href: '/project-ideas.pdf' },
+    ],
+  },
+  {
+    date: '01/20/25',
+    topic: 'No Lecture',
+  },
+  {
+    date: '01/22/25',
+    topic: 'Design Spaces Part 1: Symbolic Spaces',
+    links: [
+      { label: 'Notes', href: '/notes/lecture05.pdf' },
+      { label: 'Slides', href: '/slides/lecture05.pdf' },
+    ],
+  },
+  {
+    date: '01/27/25',
+    topic: 'Design Spaces Part 2: Variations from a Single Example',
+    links: [{ label: 'PDF', href: '/slides/lecture06.pdf' }],
+  },
+  {
+    date: '01/29/25',
+    topic: 'Project Pitches',
+  },
+  {
+    date: '02/03/25',
+    topic: 'Design Spaces Part 3: Learned Spaces from a Collection',
+    links: [{ label: 'PDF', href: '/slides/lecture08.pdf' }],
+  },
+  {
+    date: '02/05/25',
+    topic: 'Fabrication Intro and Lab',
+    links: [{ label: 'PDF', href: '/slides/lecture09.pdf' }],
+  },
+  {
+    date: '02/10/25',
+    topic: 'Fabrication Part 2 and Intro to Simulation',
+    links: [{ label: 'PDF', href: '/slides/lecture10.pdf' }],
+  },
+  {
+    date: '02/12/25',
+    topic: 'Design Evaluation Part 2: Simulation Part 2',
+    links: [{ label: 'PDF', href: '/slides/lecture11.pdf' }],
+  },
+  {
+    date: '02/19/25',
+    topic: 'Design Optimization Part 1: Continuous and Discrete Optimization',
+    links: [
+      { label: 'PDF - part 1', href: '/slides/lecture12-part1.pdf' },
+      { label: 'PDF - part 2', href: '/slides/lecture12-part2.pdf' },
+    ],
+  },
+  {
+    date: '02/24/25',
+    topic: 'Design Optimization Part 2: Topology Optimization',
+    links: [{ label: 'PDF', href: '/slides/lecture13.pdf' }],
+  },
+  {
+    date: '02/26/25',
+    topic: 'Design Optimization Part 3: Multi-Objective Optimization',
+    links: [{ label: 'PDF', href: '/slides/lecture14.pdf' }],
+  },
+  {
+    date: '03/03/25',
+    topic: 'Design Optimization Part 4: Bi-level and Bayesian Optimization',
+    links: [{ label: 'PDF', href: '/slides/lecture15.pdf' }],
+  },
+  {
+    date: '03/05/25',
+    topic:
+      'Design Exploration Part 1: Visualization and Interactive Exploration',
+    links: [{ label: 'PDF', href: '/slides/lecture16.pdf' }],
+  },
+  {
+    date: '03/10/25',
+    topic: 'Design Exploration Part 2: Inference',
+    links: [{ label: 'PDF', href: '/slides/lecture17.pdf' }],
+  },
+  {
+    date: '03/12/25',
+    topic: 'Project Presentations',
+  },
+];
+
+export const announcements: Announcement[] = [
+  {
+    id: 'first-day',
+    date: 'September 1, 2025',
+    title: 'First Day of Class',
+    content:
+      'Our first class will be on September 1. Looking forward to seeing you all!',
+    priority: 'normal',
+  },
+];
+
+export const importantDates: ImportantDate[] = [
+  {
+    id: 'first-day',
     date: 'Jan 22',
-    topic: 'Introduction to Computational Design',
-    readings: ['Chapter 1: Fundamentals of Computational Geometry'],
-    notes: 'Course overview and introduction to key concepts',
+    description: 'First Day of Class',
   },
   {
-    week: 1,
-    date: 'Jan 24',
-    topic: 'Geometric Representations',
-    readings: ['Mesh Data Structures', 'Point Clouds and Voxels'],
-  },
-  {
-    week: 2,
-    date: 'Jan 29',
-    topic: 'Mesh Processing Fundamentals',
-    readings: ['Chapter 2: Mesh Operations'],
-    assignments: ['Assignment 1: Mesh Viewer'],
-  },
-  {
-    week: 2,
-    date: 'Jan 31',
-    topic: 'Surface Reconstruction',
-    readings: ['Poisson Surface Reconstruction', 'Marching Cubes'],
-  },
-  {
-    week: 3,
-    date: 'Feb 5',
-    topic: 'Parametric Design',
-    readings: ['Parametric Modeling Techniques'],
-  },
-  {
-    week: 3,
-    date: 'Feb 7',
-    topic: 'Procedural Modeling',
-    readings: ['L-Systems', 'Shape Grammars'],
-    assignments: ['Assignment 2: Procedural Generation'],
-  },
-  {
-    week: 4,
-    date: 'Feb 12',
-    topic: 'Physical Simulation I: Basics',
-    readings: ['Introduction to Physics-Based Animation'],
-  },
-  {
-    week: 4,
-    date: 'Feb 14',
-    topic: 'Physical Simulation II: Deformables',
-    readings: ['Mass-Spring Systems', 'FEM Basics'],
-  },
-  {
-    week: 5,
-    date: 'Feb 19',
-    topic: 'Optimization for Design',
-    readings: ['Gradient-Based Optimization', 'Evolutionary Algorithms'],
-    assignments: ['Assignment 3: Design Optimization'],
-  },
-  {
-    week: 5,
-    date: 'Feb 21',
-    topic: 'Topology Optimization',
-    readings: ['SIMP Method', 'Level Set Methods'],
-  },
-  {
-    week: 6,
-    date: 'Feb 26',
-    topic: 'Fabrication Constraints',
-    readings: ['Design for Manufacturing'],
-  },
-  {
-    week: 6,
-    date: 'Feb 28',
-    topic: 'Support Structure Generation',
-    readings: ['Support Generation Algorithms'],
-  },
-  {
-    week: 7,
-    date: 'Mar 5',
-    topic: 'Midterm Review',
-    notes: 'Review session for midterm exam',
-  },
-  {
-    week: 7,
+    id: 'midterm',
     date: 'Mar 7',
-    topic: 'Midterm Exam',
-    notes: 'In-class midterm examination',
+    description: 'Midterm Exam',
   },
   {
-    week: 8,
+    id: 'project-proposal',
     date: 'Mar 19',
-    topic: 'Interactive Design Tools',
-    readings: ['HCI for Design Tools'],
-    assignments: ['Project Proposal Due'],
+    description: 'Project Proposal Due',
   },
   {
-    week: 8,
-    date: 'Mar 21',
-    topic: 'Machine Learning for Design',
-    readings: ['Neural Networks in CAD'],
-  },
-  {
-    week: 9,
-    date: 'Mar 26',
-    topic: 'Generative Design',
-    readings: ['Generative Adversarial Networks for 3D'],
-  },
-  {
-    week: 9,
-    date: 'Mar 28',
-    topic: 'Material-Aware Design',
-    readings: ['Multi-Material 3D Printing'],
-  },
-  {
-    week: 10,
-    date: 'Apr 2',
-    topic: 'Robotic Fabrication',
-    readings: ['Path Planning for Fabrication'],
-  },
-  {
-    week: 10,
-    date: 'Apr 4',
-    topic: 'Assembly Planning',
-    readings: ['Automated Assembly Sequences'],
-  },
-  {
-    week: 11,
-    date: 'Apr 9',
-    topic: 'Computational Origami',
-    readings: ['Mathematics of Paper Folding'],
-  },
-  {
-    week: 11,
-    date: 'Apr 11',
-    topic: 'Soft Robotics Design',
-    readings: ['Computational Design of Soft Robots'],
-  },
-  {
-    week: 12,
-    date: 'Apr 16',
-    topic: 'Project Presentations I',
-    notes: 'Student project presentations',
-  },
-  {
-    week: 12,
-    date: 'Apr 18',
-    topic: 'Project Presentations II',
-    notes: 'Student project presentations',
-  },
-  {
-    week: 13,
-    date: 'Apr 23',
-    topic: 'Advanced Topics & Future Directions',
-    notes: 'Discussion of emerging research areas',
-  },
-  {
-    week: 13,
+    id: 'final-project',
     date: 'Apr 25',
-    topic: 'Course Wrap-up',
-    notes: 'Final review and course conclusion',
-    assignments: ['Final Project Due'],
-  },
-];
-
-export const assignments: Assignment[] = [
-  {
-    id: 'hw1',
-    title: 'Assignment 1: Mesh Viewer',
-    dueDate: 'February 5, 2025',
-    description:
-      'Implement a basic 3D mesh viewer with rotation, zoom, and pan controls. Support loading OBJ and PLY file formats.',
-    points: 100,
-    resources: ['Starter code on GitHub', 'OBJ file format specification'],
-  },
-  {
-    id: 'hw2',
-    title: 'Assignment 2: Procedural Generation',
-    dueDate: 'February 19, 2025',
-    description:
-      'Create a procedural modeling system using L-systems or shape grammars to generate complex geometric structures.',
-    points: 100,
-    resources: ['L-system tutorial', 'Example grammars'],
-  },
-  {
-    id: 'hw3',
-    title: 'Assignment 3: Design Optimization',
-    dueDate: 'March 5, 2025',
-    description:
-      'Implement an optimization algorithm to solve a design problem with constraints.',
-    points: 100,
-    resources: ['Optimization library documentation'],
-  },
-  {
-    id: 'project',
-    title: 'Final Project',
-    dueDate: 'April 25, 2025',
-    description:
-      'Design and implement a computational design tool or fabrication-aware algorithm. Projects can be done individually or in groups of 2-3.',
-    points: 300,
-    resources: ['Project guidelines', 'Previous year examples'],
-  },
-];
-
-export const resources: Resource[] = [
-  {
-    category: 'Textbooks',
-    title: 'Polygon Mesh Processing',
-    description:
-      'Botsch et al. - Comprehensive guide to mesh processing algorithms',
-    type: 'book',
-    url: 'https://www.pmp-book.org/',
-  },
-  {
-    category: 'Textbooks',
-    title: 'Computational Geometry: Algorithms and Applications',
-    description:
-      'de Berg et al. - Fundamental algorithms in computational geometry',
-    type: 'book',
-  },
-  {
-    category: 'Software',
-    title: 'MeshLab',
-    description:
-      'Open source system for processing and editing 3D triangular meshes',
-    type: 'link',
-    url: 'https://www.meshlab.net/',
-  },
-  {
-    category: 'Software',
-    title: 'Blender',
-    description: 'Free and open-source 3D creation suite',
-    type: 'link',
-    url: 'https://www.blender.org/',
-  },
-  {
-    category: 'Software',
-    title: 'OpenSCAD',
-    description: 'Programmatic CAD for creating solid 3D objects',
-    type: 'link',
-    url: 'https://openscad.org/',
-  },
-  {
-    category: 'Libraries',
-    title: 'libigl',
-    description: 'Simple C++ geometry processing library',
-    type: 'link',
-    url: 'https://libigl.github.io/',
-  },
-  {
-    category: 'Libraries',
-    title: 'CGAL',
-    description: 'Computational Geometry Algorithms Library',
-    type: 'link',
-    url: 'https://www.cgal.org/',
-  },
-  {
-    category: 'Papers',
-    title: 'Course Reading List',
-    description: 'Collection of research papers relevant to course topics',
-    type: 'pdf',
-    url: '/course/reading-list.pdf',
-  },
-  {
-    category: 'Tutorials',
-    title: 'Git for Beginners',
-    description: 'Introduction to version control with Git',
-    type: 'link',
-    url: 'https://git-scm.com/book',
-  },
-  {
-    category: 'Tutorials',
-    title: 'Linear Algebra Review',
-    description: 'Quick review of linear algebra concepts for graphics',
-    type: 'pdf',
-    url: '/course/linear-algebra-review.pdf',
+    description: 'Final Project Due',
   },
 ];

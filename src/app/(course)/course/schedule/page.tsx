@@ -14,13 +14,10 @@ export default function SchedulePage() {
           Course Schedule
         </h1>
 
-        <div className='overflow-x-auto rounded-lg bg-white shadow-sm'>
+        <div className='overflow-x-auto rounded-lg bg-white shadow-small'>
           <table className='w-full'>
-            <thead className='bg-stone-100'>
+            <thead className='bg-stone-200'>
               <tr>
-                <th className='px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider text-stone-600'>
-                  Week
-                </th>
                 <th className='px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider text-stone-600'>
                   Date
                 </th>
@@ -28,10 +25,7 @@ export default function SchedulePage() {
                   Topic
                 </th>
                 <th className='px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider text-stone-600'>
-                  Readings
-                </th>
-                <th className='px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider text-stone-600'>
-                  Assignments
+                  Materials
                 </th>
               </tr>
             </thead>
@@ -41,9 +35,6 @@ export default function SchedulePage() {
                   key={idx}
                   className={idx % 2 === 0 ? 'bg-white' : 'bg-stone-50'}
                 >
-                  <td className='px-6 py-4 text-sm text-stone-900'>
-                    {entry.week}
-                  </td>
                   <td className='whitespace-nowrap px-6 py-4 text-sm text-stone-900'>
                     {entry.date}
                   </td>
@@ -51,34 +42,20 @@ export default function SchedulePage() {
                     <div className='text-sm font-medium text-stone-900'>
                       {entry.topic}
                     </div>
-                    {entry.notes && (
-                      <div className='text-xs text-stone-500 mt-1'>
-                        {entry.notes}
+                  </td>
+                  <td className='px-6 py-4'>
+                    {entry.links && entry.links.length > 0 ? (
+                      <div className='flex flex-wrap gap-2'>
+                        {entry.links.map((link, linkIdx) => (
+                          <a
+                            key={linkIdx}
+                            href={link.href}
+                            className='inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 hover:bg-blue-100'
+                          >
+                            {link.label}
+                          </a>
+                        ))}
                       </div>
-                    )}
-                  </td>
-                  <td className='px-6 py-4'>
-                    {entry.readings && entry.readings.length > 0 ? (
-                      <ul className='text-sm text-stone-600'>
-                        {entry.readings.map((reading, rIdx) => (
-                          <li key={rIdx} className='mb-1'>
-                            • {reading}
-                          </li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <span className='text-sm text-stone-400'>—</span>
-                    )}
-                  </td>
-                  <td className='px-6 py-4'>
-                    {entry.assignments && entry.assignments.length > 0 ? (
-                      <ul className='text-sm'>
-                        {entry.assignments.map((assignment, aIdx) => (
-                          <li key={aIdx} className='font-medium text-blue-600'>
-                            {assignment}
-                          </li>
-                        ))}
-                      </ul>
                     ) : (
                       <span className='text-sm text-stone-400'>—</span>
                     )}
@@ -87,21 +64,6 @@ export default function SchedulePage() {
               ))}
             </tbody>
           </table>
-        </div>
-
-        <div className='mt-8 rounded-lg bg-blue-50 p-6'>
-          <h2 className='mb-3 text-lg font-semibold text-blue-900'>
-            Schedule Notes
-          </h2>
-          <ul className='space-y-2 text-sm text-blue-800'>
-            <li>• Schedule is subject to change based on class progress</li>
-            <li>• Spring Break: March 10-14 (No classes)</li>
-            <li>• Reading materials will be posted on the course website</li>
-            <li>
-              • Assignment due dates are at 11:59 PM ET unless otherwise
-              specified
-            </li>
-          </ul>
         </div>
       </div>
     </div>

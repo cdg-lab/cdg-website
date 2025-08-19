@@ -74,6 +74,7 @@ export default function Header() {
             <NavLink href='/publications'>Publications</NavLink>
             <NavLink href='/team'>Team</NavLink>
             <NavLink href='/news'>News</NavLink>
+            <NavLink href='/course'>Course</NavLink>
           </nav>
           <button
             className='z-50 md:hidden'
@@ -97,6 +98,7 @@ export default function Header() {
             <NavLink href='/publications'>Publications</NavLink>
             <NavLink href='/team'>Team</NavLink>
             <NavLink href='/news'>News</NavLink>
+            <NavLink href='/course'>Course</NavLink>
           </div>
         </nav>
       </div>

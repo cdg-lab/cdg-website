@@ -68,10 +68,6 @@ export default function CourseHeader() {
           <nav className='hidden items-center space-x-1 md:flex'>
             <NavLink href='/course'>Home</NavLink>
             <NavLink href='/course/schedule'>Schedule</NavLink>
-            <NavLink href='/course/assignments'>Assignments</NavLink>
-            <NavLink href='/course/resources'>Resources</NavLink>
-            <NavLink href='/course/staff'>Staff</NavLink>
-            <NavLink href='/course/syllabus'>Syllabus</NavLink>
             <UnstyledLink
               href='/'
               className='ml-4 rounded-md px-4 py-2 text-sm text-stone-500 hover:text-stone-700'
@@ -100,10 +96,6 @@ export default function CourseHeader() {
           <div className='layout flex flex-col items-center space-y-4 py-4 text-lg'>
             <NavLink href='/course'>Home</NavLink>
             <NavLink href='/course/schedule'>Schedule</NavLink>
-            <NavLink href='/course/assignments'>Assignments</NavLink>
-            <NavLink href='/course/resources'>Resources</NavLink>
-            <NavLink href='/course/staff'>Staff</NavLink>
-            <NavLink href='/course/syllabus'>Syllabus</NavLink>
             <UnstyledLink
               href='/'
               className='mt-4 rounded-md px-4 py-2 text-sm text-stone-500 hover:text-stone-700'
