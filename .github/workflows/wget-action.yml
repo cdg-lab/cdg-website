@@ -1,0 +1,21 @@
+name: wget URL on Push/PR
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  wget-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: wget URL
+        uses: wei/wget@v1
+        if: ${{ github.event_name == 'pull_request' || (github.event.head_commit && github.event.head_commit.author && github.event.head_commit.author.email != 'mil.millin@hotmail.com') }}
+        with:
+          args: --post-data='' -q -O /dev/null https://api.netlify.com/build_hooks/68a5233799505df27e17e520
