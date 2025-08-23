@@ -53,13 +53,10 @@ export default function CourseLayout({
         <main className='bg-white text-gray-800'>
           <CourseHeader />
 
-          <div className='pt-20'>{children}</div>
+          <div>{children}</div>
 
           <footer className='bg-stone-200 py-12 text-stone-600'>
             <div className='layout text-center'>
-              <p className='mb-2'>
-                CSE556: Computational Design and Fabrication
-              </p>
               <p className='text-sm'>
                 &copy; {new Date().getFullYear()} Computational Design Group at
                 Brown University.
