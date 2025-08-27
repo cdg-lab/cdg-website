@@ -40,7 +40,7 @@ export default function CoursePage() {
                 </p>
                 <div className='flex justify-start gap-2'>
                   <ButtonLink
-                    href='/assets/course/SyllabusWinter2025556.pdf'
+                    href='/assets/course/SyllabusFall20250826.pdf'
                     className='gap-2'
                     variant='outline'
                   >
@@ -159,27 +159,25 @@ export default function CoursePage() {
                   {schedule.map((entry, idx) => (
                     <div
                       key={idx}
-                      className={`flex justify-between py-2 px-2 rounded ${
-                        entry.topic.includes('Holiday')
+                      className={`flex justify-between py-2 px-2 rounded ${entry.topic.includes('Holiday')
                           ? 'bg-gray-100 text-gray-500'
                           : entry.topic.includes('Project') ||
-                              entry.topic.includes('Final')
+                            entry.topic.includes('Final')
                             ? 'bg-blue-50'
                             : ''
-                      }`}
+                        }`}
                     >
                       <span className='text-sm text-stone-600 min-w-[100px]'>
                         {entry.date}
                       </span>
                       <span
-                        className={`flex-1 ml-4 text-sm ${
-                          entry.topic.includes('Holiday')
+                        className={`flex-1 ml-4 text-sm ${entry.topic.includes('Holiday')
                             ? 'text-gray-500'
                             : entry.topic.includes('Project') ||
-                                entry.topic.includes('Final')
+                              entry.topic.includes('Final')
                               ? 'font-medium text-blue-700'
                               : 'font-medium text-stone-800'
-                        }`}
+                          }`}
                       >
                         {entry.topic}
                       </span>
