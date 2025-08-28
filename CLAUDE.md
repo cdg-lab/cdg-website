@@ -48,7 +48,6 @@ pnpm test:watch     # Run tests in watch mode
   - Individual pages: `adriana/`, `news/`, `publications/`, `team/`
   - API routes in `api/`
 - `/src/sections/`: Main frontend components for different page sections
-
   - `HeroSection.tsx`: Landing page hero with logo
   - `PublicationsSection.tsx`: Publication display with filtering
   - `TeamSection.tsx`: Team member grid
@@ -56,7 +55,6 @@ pnpm test:watch     # Run tests in watch mode
   - `GallerySection.tsx`: Image galleries
 
 - `/src/data/`: Data layer with TypeScript types
-
   - `people.ts`: Team member profiles with positions and metadata
   - `publication.ts`: Publication parser using BibTeX
   - `publications.bib`: Raw BibTeX data source
