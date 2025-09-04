@@ -76,7 +76,6 @@ export const assignments: Assignment[] = [
   { id: 'hw2', name: 'HW2', released: '09/26', due: '10/10' },
   { id: 'hw3', name: 'HW3', released: '10/10', due: '10/24' },
   { id: 'hw4', name: 'HW4', released: '10/24', due: '11/07' },
-  { id: 'hw5', name: 'HW5', released: '11/07', due: '11/21' },
 ];
 
 export const projectMilestones: ProjectMilestone[] = [
@@ -116,53 +115,58 @@ export const schedule: ScheduleEntry[] = [
   },
   {
     date: '09/29/2025',
-    topic: 'Design Spaces Part 4: Neuro-Symbolic Design Spaces',
+    topic: 'Design Realization and Evaluation Part 1: Intro to Fabrication',
   },
   {
     date: '10/03/2025',
-    topic: 'Design Evaluation Part 1: Intro to Simulation',
+    topic: 'Design Realization and Evaluation Part 2: 3D Printing',
   },
   {
     date: '10/06/2025',
-    topic: 'Design Evaluation Part 2: FEA, Learning to Simulate',
+    topic: 'Design Realization and Evaluation Part 3: Intro to Simulation',
   },
   { date: '10/10/2025', topic: 'Project Pitches' },
   { date: '10/13/2025', topic: 'Holiday' },
-  { date: '10/17/2025', topic: 'Design Evaluation Part 3: Sustainability' },
+  {
+    date: '10/17/2025',
+    topic: 'Design Optimization Part 1: Topolgoy Optimization',
+  },
   {
     date: '10/20/2025',
-    topic: 'Design Optimization Part 1: Continuous and Discrete Optimization',
+    topic: 'Design Optimization Part 2: Discrete Optimization',
   },
   {
     date: '10/24/2025',
-    topic: 'Design Optimization Part 2: Topology Optimization',
-  },
-  {
-    date: '10/27/2025',
     topic: 'Design Optimization Part 3: Multi-Objective Optimization',
   },
   {
-    date: '10/31/2025',
-    topic: 'Design Optimization Part 4: Bi-level and Bayesian Optimization',
+    date: '10/27/2025',
+    topic: 'Topics: NeuroSymbolic Design Abstractions',
   },
-  { date: '11/03/2025', topic: 'Fabrication Part 1: Hardware Abstractions' },
+  {
+    date: '10/31/2025',
+    topic: 'Topics: Fabrication Iteration and Lazer Cutting',
+  },
+  { date: '11/03/2025', topic: 'Topics: Knitting Design and Abstractions' },
   { date: '11/07/2025', topic: 'Project Updates and Rubric Design' },
-  { date: '11/10/2025', topic: 'Fabrication Part 2: 3D Printing' },
-  { date: '11/14/2025', topic: 'Fabrication Part 3: Laser Cutting' },
+  { date: '11/10/2025', topic: 'Topics: Design and Fabrication with LLMs' },
+  { date: '11/14/2025', topic: 'Topics: Bi-level and Bayesian Optimization' },
   {
     date: '11/17/2025',
-    topic:
-      'Design Exploration Part 1: Visualization and Interactive Exploration',
+    topic: 'Topics: Visualization and Interactive Exploration',
   },
   {
     date: '11/21/2025',
-    topic: 'SCF — Students encouraged to attend',
+    topic: 'SCF Conference — Students encouraged to attend',
     links: [{ label: 'SCF Conference', href: 'https://scf.acm.org/2025/' }],
   },
-  { date: '11/24/2025', topic: 'Design Exploration Part 2: Inference' },
+  {
+    date: '11/24/2025',
+    topic: 'Topics: Design Support that Improves Understanding',
+  },
   { date: '11/28/2025', topic: 'Holiday' },
-  { date: '12/01/2025', topic: 'Design Exploration Part 3: User Feedback' },
-  { date: '12/05/2025', topic: 'Design Exploration Part 4: Accessibility' },
+  { date: '12/01/2025', topic: 'Topics: Sustainability' },
+  { date: '12/05/2025', topic: 'Topics: Accessibility' },
   { date: '12/08/2025', topic: 'Final Project Presentations' },
   { date: '12/12/2025', topic: 'Final Project Q&A' },
 ];
