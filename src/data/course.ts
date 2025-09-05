@@ -61,7 +61,7 @@ export const courseInfo: CourseInfo = {
   ta: 'Jack Zhang (He/Him)',
   time: 'Monday/Friday, 9:00–10:20 AM',
   location: 'CIT Center (Thomas Watson CIT) 316',
-  officeHours: 'TBD',
+  officeHours: 'Wed 2pm-3pm @ CIT 205',
   description: `This course explores the core mathematical, algorithmic, and computational principles that drive modern design tools, focusing on digital design representations, generative design, optimization, and interactive exploration. Students will learn to develop computational models for automating design processes, implement algorithms for shape generation and performance evaluation, and integrate digital design with fabrication techniques such as 3D printing, laser cutting, and machine knitting. The course includes hands-on assignments and a final project where students build their own computational design workflow.`,
 };
 
