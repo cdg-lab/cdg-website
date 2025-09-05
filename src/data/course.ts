@@ -72,10 +72,10 @@ export const gradingPolicy: GradingPolicy[] = [
 ];
 
 export const assignments: Assignment[] = [
-  { id: 'hw1', name: 'HW1', released: '09/12', due: '09/26' },
-  { id: 'hw2', name: 'HW2', released: '09/26', due: '10/10' },
-  { id: 'hw3', name: 'HW3', released: '10/10', due: '10/24' },
-  { id: 'hw4', name: 'HW4', released: '10/24', due: '11/07' },
+  { id: 'hw1', name: 'HW1', released: '09/11', due: '09/25' },
+  { id: 'hw2', name: 'HW2', released: '09/25', due: '10/09' },
+  { id: 'hw3', name: 'HW3', released: '10/09', due: '10/23' },
+  { id: 'hw4', name: 'HW4', released: '10/23', due: '11/06' },
 ];
 
 export const projectMilestones: ProjectMilestone[] = [
