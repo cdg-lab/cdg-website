@@ -59,7 +59,7 @@ export const people: Profile[] = [
     website: 'https://amy.zhucchini.ca/',
   },
   {
-    firstNames: ['Nat'],
+    firstNames: ['Nat', 'Nathan'],
     lastName: 'Hurtig',
     position: 'PhD Student',
     image: 'profile/nat.jpg',
