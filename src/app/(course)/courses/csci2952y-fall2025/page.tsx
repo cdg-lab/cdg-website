@@ -47,7 +47,10 @@ export default function CoursePage() {
                     <DownloadIcon className='h-4 w-4' />
                     Syllabus (PDF)
                   </ButtonLink>
-                  <ButtonLink href='https://edstem.org/us/courses/86272/discussion' variant='outline'>
+                  <ButtonLink
+                    href='https://edstem.org/us/courses/86272/discussion'
+                    variant='outline'
+                  >
                     Ed Discussion Board
                   </ButtonLink>
                 </div>

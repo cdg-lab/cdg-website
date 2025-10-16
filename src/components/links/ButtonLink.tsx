@@ -101,10 +101,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       >
         {LeftIcon && (
           <div
-            className={cn([
-              size === 'base' && 'mr-1',
-              size === 'sm' && 'mr-1.5',
-            ])}
+            className={cn([size === 'base' && 'mr-2', size === 'sm' && 'mr-2'])}
           >
             <LeftIcon
               size='1em'

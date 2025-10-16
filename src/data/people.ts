@@ -67,7 +67,7 @@ export const people: Profile[] = [
     website: 'https://nathanhurtig.com/',
   },
   {
-    firstNames: ['Jack'],
+    firstNames: ['Jack', 'Zihan'],
     lastName: 'Zhang',
     position: 'PhD Student',
     image: 'profile/jack.jpg',

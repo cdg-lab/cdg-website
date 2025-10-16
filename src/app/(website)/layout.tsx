@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Script from 'next/script';
 import * as React from 'react';
 
 import '@/styles/globals.css';
@@ -62,7 +63,7 @@ export default function RootLayout({
         <main className='bg-white text-gray-800'>
           <Header />
 
-          <div className='pt-20'>{children}</div>
+          <div className='pt-16'>{children}</div>
           <footer className='bg-stone-200 py-12 text-stone-600'>
             <div className='layout text-center'>
               <p>
@@ -72,6 +73,10 @@ export default function RootLayout({
             </div>
           </footer>
         </main>
+        <Script
+          src='https://kit.fontawesome.com/eb3cfbe0b2.js'
+          crossOrigin='anonymous'
+        />
       </body>
     </html>
   );

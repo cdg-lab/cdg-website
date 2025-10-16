@@ -8,6 +8,27 @@ const parsedPapers = parse(papers, {
   verbatimFields: ['html'],
 });
 
+const customFields: string[] = [
+  'preview',
+  'html',
+  'pdf',
+  'preview',
+  'video',
+] as const;
+
+function sanitizeBibtex(bibtex: string) {
+  return bibtex
+    .split('\n')
+    .filter((line) => {
+      const trimmed = line.trim();
+      const kv = trimmed.split('=', 2);
+      if (kv.length !== 2) return true;
+      const key = kv[0]!.trim();
+      return !customFields.includes(key);
+    })
+    .join('\n');
+}
+
 export const publications = parsedPapers.entries.map((entry) => {
   const fields = entry.fields;
   const venue =
@@ -31,7 +52,7 @@ export const publications = parsedPapers.entries.map((entry) => {
     arxiv: fields.arxiv,
     doi: fields.doi,
     abstract: fields.abstract,
-    bibtex: entry.input,
+    bibtex: sanitizeBibtex(entry.input),
     image: fields.preview,
     www: fields.html,
     pdf: fields.pdf,

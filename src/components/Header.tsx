@@ -18,7 +18,7 @@ const NavLink = ({
   children: React.ReactNode;
 }) => {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const isActive = pathname.startsWith(href);
   return (
     <UnstyledLink
       href={href}
@@ -55,17 +55,17 @@ export default function Header() {
   return (
     <>
       <div className='fixed top-0 z-10 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md'>
-        <div className='layout flex h-20 items-center justify-between'>
+        <div className='layout flex h-16 items-center justify-between'>
           <UnstyledLink
             href='/'
-            className='hidden text-xl font-bold text-stone-800 md:inline-flex gap-2'
+            className='hidden text-xl font-bold text-stone-800 md:flex gap-2'
           >
             <FlatLogo className='h-6 w-auto' />
             Computational Design Group
           </UnstyledLink>
           <UnstyledLink
             href='/'
-            className='md:hidden text-xl font-bold text-stone-800 inline-flex gap-2'
+            className='md:hidden text-xl font-bold text-stone-800 flex gap-2'
           >
             <FlatLogo className='h-6 w-auto' />
             CDG
