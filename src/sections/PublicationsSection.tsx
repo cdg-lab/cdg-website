@@ -88,6 +88,11 @@ const PublicationView = ({ publication }: { publication: Publication }) => {
               Project Page
             </ButtonLink>
           )}
+          {publication.code && (
+            <ButtonLink size='sm' variant='light' href={publication.code}>
+              Code
+            </ButtonLink>
+          )}
           {publication.pdf && (
             <ButtonLink size='sm' variant='light' href={publication.pdf}>
               PDF
@@ -159,7 +164,7 @@ export default async function PublicationsSection({
         <div className='mx-auto'>
           {showRecent
             ? publications
-                .slice(0, 3)
+                .slice(0, 5)
                 .map((publication) => (
                   <PublicationView
                     key={publication.doi}

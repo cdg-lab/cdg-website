@@ -109,6 +109,7 @@ Edit `src/data/publications.bib` and add your publication entry:
 - `pdf` - Path to PDF file relative to `/public/`
 - `video` - (Optional) Link to video
 - `arxiv` - (Optional) arXiv ID
+- `code` - (Optional) Link to code repository
 
 ### 2. Add Teaser Image
 

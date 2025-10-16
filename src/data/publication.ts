@@ -14,6 +14,7 @@ const customFields: string[] = [
   'pdf',
   'preview',
   'video',
+  'code',
 ] as const;
 
 function sanitizeBibtex(bibtex: string) {
@@ -57,6 +58,7 @@ export const publications = parsedPapers.entries.map((entry) => {
     www: fields.html,
     pdf: fields.pdf,
     video: fields.video,
+    code: fields.code,
     // json: JSON.stringify(fields, null, 2),
   };
 });
