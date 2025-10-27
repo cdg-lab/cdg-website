@@ -83,7 +83,7 @@ export const projectMilestones: ProjectMilestone[] = [
   {
     id: 'updates',
     name: 'Project Updates and Rubric Design',
-    date: '11/07/2025',
+    date: '11/14/2025',
   },
   {
     id: 'presentations',
@@ -148,7 +148,7 @@ export const schedule: ScheduleEntry[] = [
     topic: 'Topics: Fabrication Iteration and Lazer Cutting',
   },
   { date: '11/03/2025', topic: 'Topics: Knitting Design and Abstractions' },
-  { date: '11/07/2025', topic: 'Project Updates and Rubric Design' },
+  { date: '11/14/2025', topic: 'Project Updates and Rubric Design' },
   { date: '11/10/2025', topic: 'Topics: Design and Fabrication with LLMs' },
   { date: '11/14/2025', topic: 'Topics: Bi-level and Bayesian Optimization' },
   {
