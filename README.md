@@ -1,6 +1,6 @@
 # Computational Design Group Website
 
-Welcome to the CDG website repository! This guide will help you add your publications and create project pages.
+Welcome to the CDG website repository! This guide will help you add your publications and create project pages!
 
 ## Introduction
 
