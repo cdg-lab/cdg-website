@@ -79,7 +79,7 @@ export const assignments: Assignment[] = [
 ];
 
 export const projectMilestones: ProjectMilestone[] = [
-  { id: 'pitches', name: 'Project Pitches', date: '10/10/2025' },
+  { id: 'pitches', name: 'Project Pitches', date: '10/17/2025' },
   {
     id: 'updates',
     name: 'Project Updates and Rubric Design',
@@ -125,15 +125,18 @@ export const schedule: ScheduleEntry[] = [
     date: '10/06/2025',
     topic: 'Design Realization and Evaluation Part 3: Intro to Simulation',
   },
-  { date: '10/10/2025', topic: 'Project Pitches' },
+  {
+    date: '10/10/2025',
+    topic: 'Design Optimization Part 1: Intro to Numerical Methods',
+  },
   { date: '10/13/2025', topic: 'Holiday' },
   {
     date: '10/17/2025',
-    topic: 'Design Optimization Part 1: Topolgoy Optimization',
+    topic: 'Project Pitches',
   },
   {
     date: '10/20/2025',
-    topic: 'Design Optimization Part 2: Discrete Optimization',
+    topic: 'Design Optimization Part 2: Topology Optimization',
   },
   {
     date: '10/24/2025',
@@ -141,16 +144,16 @@ export const schedule: ScheduleEntry[] = [
   },
   {
     date: '10/27/2025',
-    topic: 'Topics: NeuroSymbolic Design Abstractions',
+    topic: 'Topics: Bi-level and Baysian Optimization',
   },
   {
     date: '10/31/2025',
-    topic: 'Topics: Fabrication Iteration and Lazer Cutting',
+    topic: 'Rubric Design',
   },
-  { date: '11/03/2025', topic: 'Topics: Knitting Design and Abstractions' },
-  { date: '11/14/2025', topic: 'Project Updates and Rubric Design' },
-  { date: '11/10/2025', topic: 'Topics: Design and Fabrication with LLMs' },
-  { date: '11/14/2025', topic: 'Topics: Bi-level and Bayesian Optimization' },
+  { date: '11/03/2025', topic: 'Topics: NeuroSymbolic Design Abstractions' },
+  { date: '11/14/2025', topic: 'Topics: Designing DSLs for Design' },
+  { date: '11/10/2025', topic: 'Topics: Knitting' },
+  { date: '11/14/2025', topic: 'Project Updates and Rubric Update' },
   {
     date: '11/17/2025',
     topic: 'Topics: Visualization and Interactive Exploration',
