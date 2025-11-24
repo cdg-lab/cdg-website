@@ -75,14 +75,18 @@ export default function Page() {
             </h2>
             <div className='prose prose-stone prose-a:no-underline max-w-none'>
               <ReactMarkdown components={components}>{content}</ReactMarkdown>
-              <ArrowLink
-                as={ButtonLink}
-                variant='light'
-                href='/'
-                className='mt-4'
-              >
-                View my Publications, News, and more
-              </ArrowLink>
+              <div className='flex flex-col mt-4 gap-4 items-start'>
+                <ArrowLink as={ButtonLink} variant='light' href='/'>
+                  View my Publications, News, and more
+                </ArrowLink>
+                <ArrowLink
+                  as={ButtonLink}
+                  variant='light'
+                  href='https://docs.google.com/document/d/1_WPgUFt8hEySCtvC--cteFJAOPxfl_3KkaU7c8LlJRE/edit?usp=sharing'
+                >
+                  Info for Prospective Students
+                </ArrowLink>
+              </div>
               <ReactMarkdown components={components}>{content2}</ReactMarkdown>
             </div>
           </div>

@@ -1,3 +1,5 @@
+import ArrowLink from '@/components/links/ArrowLink';
+import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 
 /**
@@ -26,6 +28,14 @@ export default function HeroSection() {
             </UnderlineLink>{' '}
             at Brown University.
           </p>
+          <ArrowLink
+            as={ButtonLink}
+            variant='light'
+            href='https://docs.google.com/document/d/1_WPgUFt8hEySCtvC--cteFJAOPxfl_3KkaU7c8LlJRE/edit?usp=sharing'
+            className='mt-4'
+          >
+            For Prospective Students
+          </ArrowLink>
         </div>
       </div>
     </section>

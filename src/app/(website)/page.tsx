@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import GallerySection from '@/sections/GallerySection';
 import HeroSection from '@/sections/HeroSection';
 import NewsSection from '@/sections/NewsSection';
 import PublicationsSection from '@/sections/PublicationsSection';
@@ -13,7 +12,6 @@ export default function HomePage() {
       <PublicationsSection showRecent />
       <NewsSection showRecent />
       <TeamSection showCurrent />
-      <GallerySection />
     </div>
   );
 }

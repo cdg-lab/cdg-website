@@ -92,7 +92,7 @@ export const people: Profile[] = [
     website: 'https://james.noeckel.com/',
   },
   {
-    firstNames: ['Benjamin', 'Benjamin T.'],
+    firstNames: ['Benjamin', 'Benjamin T.', 'Ben T.'],
     lastName: 'Jones',
     position: 'Former PhD Student',
     image: 'profile/ben.jpg',
