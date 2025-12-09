@@ -292,6 +292,54 @@ authorRemarks: {
 - Acknowledgements
 - BibTeX (always use `BibtexSection` component for this)
 
+## Adding a New Course
+
+To add a new course for a different semester:
+
+### 1. Copy an Existing Course Folder
+
+Copy an existing course folder in `src/app/(course)/courses/`:
+
+```bash
+cp -r src/app/(course)/courses/csci2952y-fall2025 src/app/(course)/courses/csci2952y-spring2026
+```
+
+Use the naming convention: `[coursecode]-[term][year]`
+
+### 2. Edit the Course Page
+
+Edit `page.tsx` in your new folder and update:
+
+- `metadata.title` - Page title for browser tab
+- `courseInfo` - Course details (code, title, term, instructor, etc.)
+- `gradingPolicy` - Grading breakdown
+- `assignments` - Homework assignments with dates
+- `projectMilestones` - Project milestone dates
+- `schedule` - Class schedule with topics
+
+### 3. Add to Course Listings
+
+Edit `src/app/(website)/courses/page.tsx` and add your course to the `courses` array.
+
+**Important:** Add new courses to the **top** of the array so they appear first in the list.
+
+```tsx
+const courses = [
+  {
+    id: 'csci-2952y-spring2026',
+    code: 'CSCI 2952Y',
+    title: 'Special Topics in Computational Design and Fabrication',
+    term: 'Spring 2026',
+    instructor: 'Adriana Schulz',
+    description: 'Course description...',
+    href: '/courses/csci2952y-spring2026',
+    schedule: 'Monday/Wednesday, 10:00–11:20 AM',
+    location: 'CIT Center 316',
+  },
+  // ... existing courses below
+];
+```
+
 ## File Structure Reference
 
 ```
