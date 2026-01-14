@@ -23,9 +23,9 @@ const courseInfo: CourseInfo = {
   term: 'Spring 2026',
   instructor: 'Adriana Schulz (She/Her)',
   ta: 'Vivian Li (She/Her) \n Oras Phongpanangam (He/Him)',
-  time: 'TBD',
-  location: 'TBD',
-  officeHours: 'TBD',
+  time: 'Monday/Wednesday, 9:00–10:20 AM',
+  location: 'TBD', // TODO: add location
+  officeHours: 'TBD', // TODO: add office hours
   description: `This course explores the core mathematical, algorithmic, and computational principles that drive modern design tools, focusing on digital design representations, generative design, optimization, and interactive exploration. Students will learn to develop computational models for automating design processes, implement algorithms for shape generation and performance evaluation, and integrate digital design with fabrication techniques such as 3D printing, laser cutting, and machine knitting. The course includes hands-on assignments and a final project where students build their own computational design workflow.`,
 };
 
@@ -35,28 +35,36 @@ const gradingPolicy: GradingPolicy[] = [
   { component: 'Participation', percentage: 25 },
 ];
 
-// TODO: Update assignment dates
 const assignments: Assignment[] = [
-  { id: 'hw1', name: 'HW1', released: '09/11', due: '09/25' },
-  { id: 'hw2', name: 'HW2', released: '09/25', due: '10/09' },
-  { id: 'hw3', name: 'HW3', released: '10/09', due: '10/23' },
-  { id: 'hw4', name: 'HW4', released: '10/23', due: '11/06' },
+  { id: 'hw1', name: 'HW1', released: '01/28/2026', due: '02/12/2026' },
+  { id: 'hw2', name: 'HW2', released: '02/12/2026', due: '02/25/2026' },
+  { id: 'hw3', name: 'HW3', released: '02/25/2026', due: '03/18/2026' },
+  { id: 'hw4', name: 'HW4', released: '03/18/2026', due: '04/08/2026' },
+  { id: 'hw5', name: 'HW5', released: '04/08/2026', due: '04/22/2026' },
 ];
 
-// TODO: Update project milestones and dates
 const projectMilestones: ProjectMilestone[] = [
-  { id: 'pitches', name: 'Project Pitches', date: '10/17/2025' },
+  { id: 'announce', name: 'Announce Project', date: '02/04/2026' },
   {
-    id: 'updates',
-    name: 'Project Updates and Rubric Design',
-    date: '11/14/2025',
+    id: 'groupForming',
+    name: 'Project Group Forming Activity',
+    date: '02/18/2026',
   },
   {
-    id: 'presentations',
-    name: 'Final Project Presentations',
-    date: '12/08/2025',
+    id: 'part1',
+    name: 'Project Part 1 Presentation: Design Tool',
+    date: '03/09/2026',
   },
-  { id: 'qa', name: 'Final Project Q&A', date: '12/12/2025' },
+  {
+    id: 'part2',
+    name: 'Project Part 2 Presentation: Fabrication',
+    date: '04/01/2026',
+  },
+  {
+    id: 'part3',
+    name: 'Project Part 3 (Final) Presentation: Inverse Design',
+    date: '05/04/2026',
+  },
 ];
 
 const schedule: ScheduleEntry[] = [
@@ -92,8 +100,7 @@ const schedule: ScheduleEntry[] = [
   },
   {
     date: '03/02/2026',
-    topic:
-      'Fabricatio01/26/2026	Design Representations Part 1: Data Structuresn Part 3: BDW (3D Printing/ Laser Cutting)',
+    topic: 'Fabrication Part 3: BDW (3D Printing/ Laser Cutting)',
   },
   { date: '03/04/2026', topic: 'Fabrication Part 4: Knitting' },
   { date: '03/09/2026', topic: 'Project Part 1 presentation ' },
