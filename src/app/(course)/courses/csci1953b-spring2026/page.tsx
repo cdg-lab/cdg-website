@@ -44,7 +44,6 @@ const assignments: Assignment[] = [
 ];
 
 const projectMilestones: ProjectMilestone[] = [
-  { id: 'announce', name: 'Announce Project', date: '02/04/2026' },
   {
     id: 'groupForming',
     name: 'Project Group Forming Activity',
@@ -52,17 +51,17 @@ const projectMilestones: ProjectMilestone[] = [
   },
   {
     id: 'part1',
-    name: 'Project Part 1 Presentation: Design Tool',
+    name: 'Project Part 1 Presentation: Domain-Specific Design Interface',
     date: '03/09/2026',
   },
   {
     id: 'part2',
-    name: 'Project Part 2 Presentation: Fabrication',
+    name: 'Project Part 2 Presentation: Fabrication Demonstration',
     date: '04/01/2026',
   },
   {
     id: 'part3',
-    name: 'Project Part 3 (Final) Presentation: Inverse Design',
+    name: 'Project Part 3 Presentation: Automatic Design Generation',
     date: '05/04/2026',
   },
 ];
