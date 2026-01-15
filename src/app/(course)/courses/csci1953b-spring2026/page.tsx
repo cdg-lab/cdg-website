@@ -24,7 +24,7 @@ const courseInfo: CourseInfo = {
   instructor: 'Adriana Schulz (She/Her)',
   ta: 'Vivian Li (She/Her) \n Oras Phongpanangam (He/Him)',
   time: 'Monday/Wednesday, 9:00–10:20 AM',
-  location: 'TBD', // TODO: add location
+  location: 'CIT Center 101',
   officeHours: 'TBD', // TODO: add office hours
   description: `This course explores the core mathematical, algorithmic, and computational principles that drive modern design tools, focusing on digital design representations, generative design, optimization, and interactive exploration. Students will learn to develop computational models for automating design processes, implement algorithms for shape generation and performance evaluation, and integrate digital design with fabrication techniques such as 3D printing, laser cutting, and machine knitting. The course includes hands-on assignments and a final project where students build their own computational design workflow.`,
 };
