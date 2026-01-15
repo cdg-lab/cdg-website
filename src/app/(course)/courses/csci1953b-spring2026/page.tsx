@@ -30,9 +30,9 @@ const courseInfo: CourseInfo = {
 };
 
 const gradingPolicy: GradingPolicy[] = [
-  { component: 'Assignments', percentage: 40 },
+  { component: 'Assignments', percentage: 50 },
   { component: 'Course Project', percentage: 35 },
-  { component: 'Participation', percentage: 25 },
+  { component: 'Participation', percentage: 15 },
 ];
 
 const assignments: Assignment[] = [
