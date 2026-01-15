@@ -9,6 +9,18 @@ export const metadata: Metadata = {
 
 const courses = [
   {
+    id: 'csci-1953b',
+    code: 'CSCI 1953B',
+    title: 'Special Topics in Computational Design and Fabrication',
+    term: 'Spring 2026',
+    instructor: 'Adriana Schulz',
+    description:
+      'This course explores the core mathematical, algorithmic, and computational principles that drive modern design tools, focusing on digital design representations, generative design, optimization, and interactive exploration.',
+    href: '/courses/csci1953b-spring2026',
+    schedule: 'Monday/Wednesday, 9:00–10:20 AM',
+    location: 'CIT Center 101',
+  },
+  {
     id: 'csci-2952y',
     code: 'CSCI 2952Y',
     title: 'Special Topics in Computational Design and Fabrication',
