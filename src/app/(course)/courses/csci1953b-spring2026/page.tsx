@@ -37,10 +37,10 @@ const gradingPolicy: GradingPolicy[] = [
 
 const assignments: Assignment[] = [
   { id: 'hw1', name: 'HW1', released: '01/28/2026', due: '02/12/2026' },
-  { id: 'hw2', name: 'HW2', released: '02/12/2026', due: '02/25/2026' },
-  { id: 'hw3', name: 'HW3', released: '02/25/2026', due: '03/18/2026' },
-  { id: 'hw4', name: 'HW4', released: '03/18/2026', due: '04/08/2026' },
-  { id: 'hw5', name: 'HW5', released: '04/08/2026', due: '04/22/2026' },
+  { id: 'hw2', name: 'HW2', released: '02/12/2026', due: '02/26/2026' },
+  { id: 'hw3', name: 'HW3', released: '02/25/2026', due: '03/19/2026' },
+  { id: 'hw4', name: 'HW4', released: '03/18/2026', due: '04/09/2026' },
+  { id: 'hw5', name: 'HW5', released: '04/08/2026', due: '04/23/2026' },
 ];
 
 const projectMilestones: ProjectMilestone[] = [
@@ -51,17 +51,17 @@ const projectMilestones: ProjectMilestone[] = [
   },
   {
     id: 'part1',
-    name: 'Project Part 1 Presentation: Domain-Specific Design Interface',
+    name: 'Project Part 1: Domain-Specific Design Interface',
     date: '03/09/2026',
   },
   {
     id: 'part2',
-    name: 'Project Part 2 Presentation: Fabrication Demonstration',
+    name: 'Project Part 2: Fabrication Demonstration',
     date: '04/01/2026',
   },
   {
     id: 'part3',
-    name: 'Project Part 3 Presentation: Automatic Design Generation',
+    name: 'Project Part 3: Automatic Design Generation',
     date: '05/04/2026',
   },
 ];
