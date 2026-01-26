@@ -172,7 +172,7 @@ export default function CoursePage() {
                     Syllabus (PDF)
                   </ButtonLink>
                   <ButtonLink
-                    href='https://edstem.org/us/courses/86272/discussion'
+                    href='https://edstem.org/us/courses/93835/discussion'
                     variant='outline'
                   >
                     Ed Discussion Board
