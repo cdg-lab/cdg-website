@@ -25,7 +25,8 @@ const courseInfo: CourseInfo = {
   ta: 'Vivian Li (She/Her) \n Oras Phongpanangam (He/Him)',
   time: 'Monday/Wednesday, 9:00–10:20 AM',
   location: 'CIT Center 101',
-  officeHours: 'TBD', // TODO: add office hours
+  officeHours:
+    'Oras: Tuesday 1-2pm\nVivian: Friday 3-4pm\nIn CIT 205 (CDG Lab)\n(Additional hours available by appointment)',
   description: `This course explores the core mathematical, algorithmic, and computational principles that drive modern design tools, focusing on digital design representations, generative design, optimization, and interactive exploration. Students will learn to develop computational models for automating design processes, implement algorithms for shape generation and performance evaluation, and integrate digital design with fabrication techniques such as 3D printing, laser cutting, and machine knitting. The course includes hands-on assignments and a final project where students build their own computational design workflow.`,
 };
 
@@ -371,7 +372,9 @@ export default function CoursePage() {
                   </div>
                   <div>
                     <p className='font-medium text-stone-700'>Office Hours</p>
-                    <p>{courseInfo.officeHours}</p>
+                    <p style={{ whiteSpace: 'pre-line' }}>
+                      {courseInfo.officeHours}
+                    </p>
                   </div>
                 </div>
               </div>
