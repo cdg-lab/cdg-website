@@ -71,74 +71,85 @@ const schedule: ScheduleEntry[] = [
   { date: '01/21/2026', topic: 'Overview & Admin' },
   {
     date: '01/26/2026',
-    topic: 'Design Representations Part 1: Data Structures',
+    topic: 'No class: Snow Day',
   },
   {
     date: '01/28/2026',
+    topic: 'Design Representations Part 1: Data Structures',
+  },
+  {
+    date: '02/02/2026',
     topic: 'Design Representations Part 2: More on Data Structures',
   },
-  { date: '02/02/2026', topic: 'Design Representations Part 3: Programs' },
-  { date: '02/04/2026', topic: 'Design Spaces Part 1: Symbolic Spaces' },
+  { date: '02/04/2026', topic: 'Design Representations Part 3: Programs' },
   {
     date: '02/09/2026',
-    topic: 'Design Spaces Part 2: Variations from a Single Example',
+    topic: 'Design Spaces Part 1: Symbolic Spaces',
   },
   {
     date: '02/12/2026',
-    topic: 'Design Spaces Part 3: Learned Spaces from a Collection',
+    topic: 'Design Spaces Part 2: Variations from a Single Example',
   },
   { date: '02/16/2026', topic: 'No class: Holiday' },
   {
     date: '02/18/2026',
+    topic: 'Design Spaces Part 3: Learned Spaces from a Collection',
+  },
+  {
+    date: '02/23/2026',
     topic:
       'Design Spaces Part 4: NeuroSymbolic Design Spaces / Project Planning ',
   },
-  { date: '02/23/2026', topic: 'Fabrication Part 1: Hardware Abstractions ' },
   {
     date: '02/25/2026',
-    topic: 'Fabrication Part 2: BDW (3D Printing/ Laser Cutting)',
+    topic: 'Fabrication Part 1: Hardware Abstractions',
   },
   {
     date: '03/02/2026',
+    topic: 'Fabrication Part 2: BDW (3D Printing/ Laser Cutting)',
+  },
+  {
+    date: '03/04/2026',
     topic: 'Fabrication Part 3: BDW (3D Printing/ Laser Cutting)',
   },
-  { date: '03/04/2026', topic: 'Fabrication Part 4: Knitting' },
   { date: '03/09/2026', topic: 'Project Part 1 presentation ' },
-  { date: '03/11/2026', topic: 'Design Evaluation Part 1: Intro to Sim' },
-  { date: '03/16/2026', topic: 'Design Evaluation Part 2: FEA, Learning' },
-  { date: '03/18/2026', topic: 'Design Evaluation Part 3: Sustainability ' },
+  { date: '03/11/2026', topic: 'Fabrication Part 4: Knitting' },
+  { date: '03/16/2026', topic: 'Design Evaluation Part 1: Intro to Sim' },
+  { date: '03/18/2026', topic: 'Design Evaluation Part 2: FEA, Learning' },
   { date: '03/23/2026', topic: 'No class: Spring Break' },
   { date: '03/25/2026', topic: 'No class: Spring Break' },
   {
     date: '03/30/2026',
-    topic: 'Design Optimization Part 1: Continuous and Discrete Optimization',
+    topic: 'Design Evaluation Part 3: Sustainability',
   },
   { date: '04/01/2026', topic: 'Project Part 2 presentation' },
   {
     date: '04/06/2026',
-    topic: 'Design Optimization Part 2: Topology Optimization',
+    topic: 'Design Optimization Part 1: Continuous and Discrete Optimization',
   },
   { date: '04/08/2026', topic: 'No class: Adriana OOF' },
   {
     date: '04/13/2026',
-    topic: 'Design Optimization Part 3: Multi-Objective Optimization',
+    topic: 'Design Optimization Part 2: Topology Optimization',
   },
   {
     date: '04/15/2026',
-    topic: 'Design Optimization Part 4: Bi-level and Bayesian Optimization',
+    topic: 'Design Optimization Part 3: Multi-Objective Optimization',
   },
   {
     date: '04/20/2026',
+    topic: 'Design Optimization Part 4: Bi-level and Bayesian Optimization',
+  },
+  {
+    date: '04/22/2026',
     topic:
       'Design Exploration Part 1: Visualization and Interactive Exploration',
   },
-  { date: '04/22/2026', topic: 'Design Exploration Part 2: Inference' },
   {
     date: '04/27/2026',
-    topic:
-      'Design Exploration Part 3: Design Support that Improves Understanding',
+    topic: 'Design Exploration Part 2: Inference',
   },
-  { date: '04/29/2026', topic: 'Design Exploration Part 4: Accessibility ' },
+  { date: '04/29/2026', topic: 'Design Exploration Part 3: Accessibility ' },
   { date: '05/04/2026', topic: 'Final Project Presentations' },
 ];
 
