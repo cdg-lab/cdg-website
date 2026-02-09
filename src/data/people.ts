@@ -2,6 +2,7 @@ export type Position =
   | 'Principal Investigator'
   | 'Postdoctoral Researcher'
   | 'PhD Student'
+  | 'Master Student'
   | 'Former PhD Student'
   | 'Former Visiting Student'
   | 'Former Postdoctoral Researcher';
@@ -127,12 +128,37 @@ export const people: Profile[] = [
     website: 'https://chenming-wu.github.io/',
     image: 'profile/chenming.jpg',
   },
+  {
+    firstNames: ['Jason'],
+    lastName: 'Liu',
+    position: 'PhD Student',
+    joined: 2025,
+    website: '#',
+    image: 'profile/jason.jpg',
+  },
+  {
+    firstNames: ['Carlos'],
+    lastName: 'Tejada',
+    position: 'Postdoctoral Researcher',
+    joined: 2025,
+    website: 'https://carlosetejada.com/',
+    image: 'profile/carlos.jpg',
+  },
+  {
+    firstNames: ['Vivian'],
+    lastName: 'Li',
+    position: 'Master Student',
+    joined: 2025,
+    website: '#',
+    image: 'profile/vivian.jpg',
+  },
 ];
 
 const POSITION_ORDER = {
   'Principal Investigator': 0,
   'Postdoctoral Researcher': 1,
   'PhD Student': 2,
+  'Master Student': 2,
   'Former PhD Student': 3,
   'Former Postdoctoral Researcher': 3,
   'Former Visiting Student': 3,

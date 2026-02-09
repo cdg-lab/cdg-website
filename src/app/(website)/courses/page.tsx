@@ -48,7 +48,7 @@ export default function CoursesPage() {
           </div>
 
           <div className='grid gap-6'>
-            {courses.map((course) => (
+            {courses.map((course, i) => (
               <Link
                 key={course.id}
                 href={course.href}
@@ -63,9 +63,16 @@ export default function CoursesPage() {
                       {course.title}
                     </p>
                   </div>
-                  <span className='inline-block px-3 py-1 text-sm font-medium text-blue-700 bg-blue-50 rounded-full'>
-                    {course.term}
-                  </span>
+                  <div className='flex gap-2'>
+                    {i == 0 && (
+                      <span className='inline-block px-3 py-1 text-sm font-medium text-green-700 bg-green-50 rounded-full'>
+                        Current
+                      </span>
+                    )}
+                    <span className='inline-block px-3 py-1 text-sm font-medium text-blue-700 bg-blue-50 rounded-full'>
+                      {course.term}
+                    </span>
+                  </div>
                 </div>
 
                 <p className='text-stone-600 mb-4 line-clamp-2'>
