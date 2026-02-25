@@ -376,6 +376,11 @@ export default function CoursePage() {
                         {courseInfo.instructor}
                       </UnderlineLink>
                     </p>
+                    <p>
+                      <UnderlineLink href='https://calendar.app.google/nSRhpyVwxLqTzyyF6'>
+                        Book office hours here
+                      </UnderlineLink>
+                    </p>
                   </div>
                   <div>
                     <p className='font-medium text-stone-700'>TA</p>
