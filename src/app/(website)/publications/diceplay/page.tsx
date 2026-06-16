@@ -77,13 +77,13 @@ export default function Page() {
       <Section title='Abstract'>
         <p>
           We present Diceplay, a modular physical display for abstract visual
-          compo sition built from a grid of identical dice. Each die has six
+          composition built from a grid of identical dice. Each die has six
           faces with distinct geometric primitives, and images emerge through
           the placement and orien tation of the dice. While this medium enables
           reusable and reconfigurable physical imagery, it poses a challenging
           design problem: images must be expressed through discrete, extremely
           low-resolution abstractions, making manual authoring difficult. To
-          address this challenge, we introduce a compu tational design system
+          address this challenge, we introduce a computational design system
           that automatically generates Diceplay configurations from text
           prompts. Our key technical contribution is a grammar-based for
           mulation that relaxes this discrete design space into a smooth
