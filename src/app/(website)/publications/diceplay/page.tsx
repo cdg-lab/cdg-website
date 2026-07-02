@@ -85,15 +85,15 @@ export default function Page() {
           low-resolution abstractions, making manual authoring difficult. To
           address this challenge, we introduce a computational design system
           that automatically generates Diceplay configurations from text
-          prompts. Our key technical contribution is a grammar-based for
-          mulation that relaxes this discrete design space into a smooth
-          optimization landscape, enabling gradient-based optimization using
-          score distillation sampling. We show that our approach consistently
-          produces meaningful abstractions for this medium, whereas
-          state-of-the-art smoothing techniques fail in this extremely
-          challenging regime. We demonstrate our method across a range of
-          prompts and fabricated examples, showing how computationally generated
-          abstractions can be realized as physical visual artifacts.
+          prompts. Our key technical contribution is a grammar-based formulation
+          that relaxes this discrete design space into a smooth optimization
+          landscape, enabling gradient-based optimization using score
+          distillation sampling. We show that our approach consistently produces
+          meaningful abstractions for this medium, whereas state-of-the-art
+          smoothing techniques fail in this extremely challenging regime. We
+          demonstrate our method across a range of prompts and fabricated
+          examples, showing how computationally generated abstractions can be
+          realized as physical visual artifacts.
         </p>
       </Section>
       <Section title='Fast Forward'>

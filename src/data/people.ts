@@ -149,7 +149,7 @@ export const people: Profile[] = [
     lastName: 'Li',
     position: 'Master Student',
     joined: 2025,
-    website: '#',
+    website: 'https://vivli.io/',
     image: 'profile/vivian.jpg',
   },
 ];
