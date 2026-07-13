@@ -134,9 +134,6 @@ export default function Page() {
   numpages  = {11},
   location  = {Los Angeles, CA, USA},
   keywords  = {optimization, fabrication, shape grammar},
-  preview   = {2026-diceplay.png},
-  html      = {/publications/diceplay},
-  pdf       = {/assets/papers/SIG-2026-DicePlay.pdf}
 }
 `}
       </BibtexSection>
