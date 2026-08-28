@@ -128,7 +128,7 @@ export default function CoursePage() {
                 </p>
                 <div className='flex justify-start gap-2'>
                   <ButtonLink
-                    href='/assets/course/SyllabusFall2026.pdf'
+                    href='/assets/course/SyllabusFall20260828.pdf'
                     className='gap-2'
                     variant='outline'
                   >
