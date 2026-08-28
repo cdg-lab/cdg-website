@@ -22,17 +22,17 @@ const courseInfo: CourseInfo = {
   title: 'Special Topics in Computational Design and Fabrication',
   term: 'Fall 2026',
   instructor: 'Adriana Schulz (She/Her)',
-  ta: 'Xiaoyi Liu (He/Him)',
+  ta: 'Xiaoyi Liu ("Jason") (He/Him)',
   time: 'Monday/Friday, 9:00–10:20 AM',
   location: 'CIT Center 316',
-  officeHours: 'TBD',
+  officeHours: 'Fridays 10:20-11:00 AM at CIT 405',
   description: `This course explores the core mathematical, algorithmic, and computational principles that drive modern design tools, focusing on digital design representations, generative design, optimization, and interactive exploration. Students will learn to develop computational models for automating design processes, implement algorithms for shape generation and performance evaluation, and integrate digital design with fabrication techniques such as 3D printing, laser cutting, and machine knitting. The course includes hands-on assignments and a final project where students build their own computational design workflow.`,
 };
 
 const gradingPolicy: GradingPolicy[] = [
   { component: 'Project Milestones (5 x 10%)', percentage: 50 },
   { component: 'Participation', percentage: 20 },
-  { component: 'Final Report', percentage: 30 },
+  { component: 'Final Paper', percentage: 30 },
 ];
 
 const assignments: Assignment[] = [];
@@ -40,33 +40,38 @@ const assignments: Assignment[] = [];
 const projectMilestones: ProjectMilestone[] = [
   {
     id: 'groupForming',
-    name: 'Group Forming Activity (Ungraded)',
+    name: 'Group Forming Activity',
     date: '09/25/2026',
   },
   {
     id: 'milestone1',
-    name: 'Short talk: Intro, related work, and design space description',
+    name: 'Milestone 1: Intro, Related Work, and Design Space (paper submission pt.1)',
     date: '10/02/2026',
   },
   {
     id: 'milestone2',
-    name: 'Demo of direct Design + Proposal on Fabrication',
+    name: 'Milestone 2: Direct Design Demo and Fabrication Proposal (paper submission pt.2)',
     date: '10/16/2026',
   },
   {
     id: 'milestone3',
-    name: 'Present Fabricated results + Proposal for System',
+    name: 'Milestone 3: Fabricated Results and System Proposal (paper submission pt.3)',
     date: '10/30/2026',
   },
   {
     id: 'milestone4',
-    name: 'Present end-to-end results of design automation',
+    name: 'Milestone 4: End-to-End Design Automation (paper submission pt.4)',
     date: '11/20/2026',
   },
   {
     id: 'milestone5',
-    name: 'Ablations and comparisons',
+    name: 'Milestone 5: Final Results, Ablations, and Comparisons (paper submission pt.5)',
     date: '12/04/2026',
+  },
+  {
+    id: 'final',
+    name: 'Final Paper Submission',
+    date: '12/11/2026',
   },
 ];
 
@@ -97,7 +102,7 @@ const schedule: ScheduleEntry[] = [
   { date: '11/30/2026', topic: 'Topics 4: Accessibility and Sustainability' },
   { date: '12/04/2026', topic: 'Project Presentations and Discussion (Milestone 5)' },
   { date: '12/07/2026', topic: 'No class: Reading Period' },
-  { date: '12/11/2026', topic: 'No class: Reading Period' },
+  { date: '12/11/2026', topic: 'Project Final Paper Due'},
 ];
 
 export default function CoursePage() {
@@ -216,7 +221,7 @@ export default function CoursePage() {
                   <thead>
                     <tr className='border-b border-stone-200'>
                       <th className='text-left py-2 text-stone-700'>
-                        Milestone
+                        Item
                       </th>
                       <th className='text-right py-2 text-stone-700'>Date</th>
                     </tr>
