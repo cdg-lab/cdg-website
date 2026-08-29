@@ -80,29 +80,50 @@ const schedule: ScheduleEntry[] = [
   { date: '09/14/2026', topic: 'Design Representations Part 1' },
   { date: '09/18/2026', topic: 'Design Representations Part 2' },
   { date: '09/21/2026', topic: 'No class: Adriana OOF' },
-  { date: '09/25/2026', topic: 'Design Spaces Part 1 & Group Forming Activity' },
+  {
+    date: '09/25/2026',
+    topic: 'Design Spaces Part 1 & Group Forming Activity',
+  },
   { date: '09/28/2026', topic: 'Design Spaces Part 2' },
-  { date: '10/02/2026', topic: 'Project Presentations and Discussion (Milestone 1)' },
+  {
+    date: '10/02/2026',
+    topic: 'Project Presentations and Discussion (Milestone 1)',
+  },
   { date: '10/05/2026', topic: 'Fabrication Part 1 (at BDW)' },
   { date: '10/09/2026', topic: 'Fabrication Part 2 (at BDW)' },
   { date: '10/12/2026', topic: 'No class: Brown Holiday' },
-  { date: '10/16/2026', topic: 'Project Presentations and Discussion (Milestone 2)' },
+  {
+    date: '10/16/2026',
+    topic: 'Project Presentations and Discussion (Milestone 2)',
+  },
   { date: '10/19/2026', topic: 'Optimization Part 1' },
   { date: '10/23/2026', topic: 'Project activity: How to write a good intro?' },
   { date: '10/26/2026', topic: 'Optimization Part 2' },
-  { date: '10/30/2026', topic: 'Project Presentations and Discussion (Milestone 3)' },
+  {
+    date: '10/30/2026',
+    topic: 'Project Presentations and Discussion (Milestone 3)',
+  },
   { date: '11/02/2026', topic: 'Optimization Part 3' },
   { date: '11/06/2026', topic: 'Project activity: What makes a good system?' },
   { date: '11/09/2026', topic: 'Topics 1: NeuroSymbolic Reasoning' },
-  { date: '11/13/2026', topic: 'Project activity: What makes a good evaluation?' },
+  {
+    date: '11/13/2026',
+    topic: 'Project activity: What makes a good evaluation?',
+  },
   { date: '11/16/2026', topic: 'Topics 2: Geometry and Deformation' },
-  { date: '11/20/2026', topic: 'Project Presentations and Discussion (Milestone 4)' },
+  {
+    date: '11/20/2026',
+    topic: 'Project Presentations and Discussion (Milestone 4)',
+  },
   { date: '11/23/2026', topic: 'Topics 3: Physics Simulation' },
   { date: '11/27/2026', topic: 'No class: Thanksgiving Recess' },
   { date: '11/30/2026', topic: 'Topics 4: Accessibility and Sustainability' },
-  { date: '12/04/2026', topic: 'Project Presentations and Discussion (Milestone 5)' },
+  {
+    date: '12/04/2026',
+    topic: 'Project Presentations and Discussion (Milestone 5)',
+  },
   { date: '12/07/2026', topic: 'No class: Reading Period' },
-  { date: '12/11/2026', topic: 'Project Final Paper Due'},
+  { date: '12/11/2026', topic: 'Project Final Paper Due' },
 ];
 
 export default function CoursePage() {
@@ -220,9 +241,7 @@ export default function CoursePage() {
                 <table className='w-full text-sm'>
                   <thead>
                     <tr className='border-b border-stone-200'>
-                      <th className='text-left py-2 text-stone-700'>
-                        Item
-                      </th>
+                      <th className='text-left py-2 text-stone-700'>Item</th>
                       <th className='text-right py-2 text-stone-700'>Date</th>
                     </tr>
                   </thead>
