@@ -26,7 +26,22 @@ const courseInfo: CourseInfo = {
   time: 'Monday/Friday, 9:00–10:20 AM',
   location: 'CIT Center 316',
   officeHours: 'Fridays 10:20-11:00 AM at CIT 405',
-  description: `This course explores the core mathematical, algorithmic, and computational principles that drive modern design tools, focusing on digital design representations, generative design, optimization, and interactive exploration. Students will learn to develop computational models for automating design processes, implement algorithms for shape generation and performance evaluation, and integrate digital design with fabrication techniques such as 3D printing, laser cutting, and machine knitting. The course includes hands-on assignments and a final project where students build their own computational design workflow.`,
+  description: (
+    <div className="space-y-4">
+      <p>
+        This course has two central goals: to teach the fundamental concepts behind computational design and fabrication systems, and to teach students how to conduct and communicate research in this area. The course is designed to sit somewhere between a traditional assignment-based class and a fully open-ended research seminar, with the goal of getting the best of both worlds: students learn and implement core technical concepts while also developing an original idea into a working system and research paper.
+      </p>
+      <p>
+        Students pursue both goals through a semester-long team project. Each team will design and build a <strong>computational design system in a domain of its choice</strong>. The project follows a sequence of milestones aligned with the lectures: teams will (1) define a design representation and design space, (2) build an interactive tool for direct design, (3) develop a fabrication pipeline, (4) introduce computational methods for automating parts of the design process—often through optimization—and (5) evaluate the resulting system. This structure allows students to immediately apply concepts from lecture while progressively building, testing, and refining a system that works.
+      </p>
+      <p>
+        In parallel, students will learn how to position and communicate their work as research. Writing milestones will accompany the system milestones, with feedback throughout the semester, and lectures will also address research writing and presentation.
+      </p>
+      <p>
+        The goal is for students to finish the course with both a working computational design system and a paper that can serve as the basis for a research publication. Projects from recent offerings have subsequently been published at ACM SIGGRAPH and the ACM Symposium on Computational Fabrication (SCF), leading venues in the field. We hope that multiple projects from this offering will likewise develop into publishable research.
+      </p>
+    </div>
+  ) as any,
 };
 
 const gradingPolicy: GradingPolicy[] = [
@@ -80,50 +95,29 @@ const schedule: ScheduleEntry[] = [
   { date: '09/14/2026', topic: 'Design Representations Part 1' },
   { date: '09/18/2026', topic: 'Design Representations Part 2' },
   { date: '09/21/2026', topic: 'No class: Adriana OOF' },
-  {
-    date: '09/25/2026',
-    topic: 'Design Spaces Part 1 & Group Forming Activity',
-  },
+  { date: '09/25/2026', topic: 'Design Spaces Part 1 & Group Forming Activity' },
   { date: '09/28/2026', topic: 'Design Spaces Part 2' },
-  {
-    date: '10/02/2026',
-    topic: 'Project Presentations and Discussion (Milestone 1)',
-  },
+  { date: '10/02/2026', topic: 'Project Presentations and Discussion (Milestone 1)' },
   { date: '10/05/2026', topic: 'Fabrication Part 1 (at BDW)' },
   { date: '10/09/2026', topic: 'Fabrication Part 2 (at BDW)' },
   { date: '10/12/2026', topic: 'No class: Brown Holiday' },
-  {
-    date: '10/16/2026',
-    topic: 'Project Presentations and Discussion (Milestone 2)',
-  },
+  { date: '10/16/2026', topic: 'Project Presentations and Discussion (Milestone 2)' },
   { date: '10/19/2026', topic: 'Optimization Part 1' },
   { date: '10/23/2026', topic: 'Project activity: How to write a good intro?' },
   { date: '10/26/2026', topic: 'Optimization Part 2' },
-  {
-    date: '10/30/2026',
-    topic: 'Project Presentations and Discussion (Milestone 3)',
-  },
+  { date: '10/30/2026', topic: 'Project Presentations and Discussion (Milestone 3)' },
   { date: '11/02/2026', topic: 'Optimization Part 3' },
   { date: '11/06/2026', topic: 'Project activity: What makes a good system?' },
   { date: '11/09/2026', topic: 'Topics 1: NeuroSymbolic Reasoning' },
-  {
-    date: '11/13/2026',
-    topic: 'Project activity: What makes a good evaluation?',
-  },
+  { date: '11/13/2026', topic: 'Project activity: What makes a good evaluation?' },
   { date: '11/16/2026', topic: 'Topics 2: Geometry and Deformation' },
-  {
-    date: '11/20/2026',
-    topic: 'Project Presentations and Discussion (Milestone 4)',
-  },
+  { date: '11/20/2026', topic: 'Project Presentations and Discussion (Milestone 4)' },
   { date: '11/23/2026', topic: 'Topics 3: Physics Simulation' },
   { date: '11/27/2026', topic: 'No class: Thanksgiving Recess' },
   { date: '11/30/2026', topic: 'Topics 4: Accessibility and Sustainability' },
-  {
-    date: '12/04/2026',
-    topic: 'Project Presentations and Discussion (Milestone 5)',
-  },
+  { date: '12/04/2026', topic: 'Project Presentations and Discussion (Milestone 5)' },
   { date: '12/07/2026', topic: 'No class: Reading Period' },
-  { date: '12/11/2026', topic: 'Project Final Paper Due' },
+  { date: '12/11/2026', topic: 'Project Final Paper Due'},
 ];
 
 export default function CoursePage() {
@@ -144,12 +138,12 @@ export default function CoursePage() {
                 <h2 className='mb-4 text-2xl font-semibold text-stone-800'>
                   Course Description
                 </h2>
-                <p className='text-stone-600 leading-relaxed mb-4'>
+                <div className='text-stone-600 leading-relaxed mb-4'>
                   {courseInfo.description}
-                </p>
+                </div>
                 <div className='flex justify-start gap-2'>
                   <ButtonLink
-                    href='/assets/course/SyllabusFall20260828.pdf'
+                    href='/assets/course/SyllabusFall2026.pdf'
                     className='gap-2'
                     variant='outline'
                   >
@@ -241,7 +235,9 @@ export default function CoursePage() {
                 <table className='w-full text-sm'>
                   <thead>
                     <tr className='border-b border-stone-200'>
-                      <th className='text-left py-2 text-stone-700'>Item</th>
+                      <th className='text-left py-2 text-stone-700'>
+                        Item
+                      </th>
                       <th className='text-right py-2 text-stone-700'>Date</th>
                     </tr>
                   </thead>
