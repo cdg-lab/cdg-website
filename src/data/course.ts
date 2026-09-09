@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export interface CourseInfo {
   code: string;
   title: string;
@@ -7,7 +9,7 @@ export interface CourseInfo {
   time: string;
   location: string;
   officeHours: string;
-  description: string;
+  description: ReactNode;
 }
 
 export interface Assignment {
