@@ -29,9 +29,10 @@ export const people: Profile[] = [
   {
     firstNames: ['Felix'],
     lastName: 'Hähnlein',
-    position: 'Postdoctoral Researcher',
+    position: 'Former Postdoctoral Researcher',
     image: 'profile/felix.jpg',
     joined: 2022,
+    until: 2026,
     website: 'https://obikate.github.io/',
   },
   {
@@ -54,9 +55,10 @@ export const people: Profile[] = [
   {
     firstNames: ['Amy'],
     lastName: 'Zhu',
-    position: 'PhD Student',
+    position: 'Former PhD Student',
     image: 'profile/amy.jpg',
     joined: 2019,
+    until: 2026,
     website: 'https://amy.zhucchini.ca/',
   },
   {
