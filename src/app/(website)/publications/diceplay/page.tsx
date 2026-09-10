@@ -79,7 +79,7 @@ export default function Page() {
           We present Diceplay, a modular physical display for abstract visual
           composition built from a grid of identical dice. Each die has six
           faces with distinct geometric primitives, and images emerge through
-          the placement and orien tation of the dice. While this medium enables
+          the placement and orientation of the dice. While this medium enables
           reusable and reconfigurable physical imagery, it poses a challenging
           design problem: images must be expressed through discrete, extremely
           low-resolution abstractions, making manual authoring difficult. To
