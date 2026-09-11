@@ -26,6 +26,7 @@ const project: Project = {
     },
     {
       name: 'Vivian Li',
+      href: 'https://vivli.io',
       remark: '2',
     },
     {
