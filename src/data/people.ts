@@ -154,6 +154,30 @@ export const people: Profile[] = [
     website: 'https://vivli.io/',
     image: 'profile/vivian.jpg',
   },
+  {
+    firstNames: ['Joanna', 'Sujin'],
+    lastName: 'Yoo',
+    position: 'PhD Student',
+    image: 'profile/joanna.jpg',
+    joined: 2026,
+    website: 'https://sujinjoannayoo.com/',
+  },
+  {
+    firstNames: ['Alice', 'Ziyu'],
+    lastName: 'Wei',
+    position: 'PhD Student',
+    image: 'profile/alice.jpg',
+    joined: 2026,
+    website: 'https://aliceweiziyu.com/',
+  },
+  {
+    firstNames: ['Oras'],
+    lastName: 'Phongpanangam',
+    position: 'Master Student',
+    image: 'profile/oras.jpg',
+    joined: 2025,
+    website: 'https://oras-p.com/',
+  },
 ];
 
 const POSITION_ORDER = {
