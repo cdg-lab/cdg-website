@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import ReactMarkdown, { Components } from 'react-markdown';
 
+import { courses } from '@/data/course';
+
 import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
@@ -18,9 +20,17 @@ My research group creates design tools and systems that aim to transform how we 
 My research has been recognized by [MIT Technology Review's Innovators Under 35](https://www.technologyreview.com/innovator/adriana-schulz/), an [Alfred P. Sloan Foundation Fellowship](https://sloan.org/fellowships/2024-Fellows), an [NSF CAREER Award](https://www.nsf.gov/awardsearch/show-award?AWD_ID=2537422), the [CRA Anita Borg Early Career Award](https://cra.org/crn/2025/06/cra-early-career-awards-adriana-schulz-named-2025-cra-anita-borg-early-career-award-recipient/), and the [ACM SIGGRAPH Significant New Researcher Award](https://www.siggraph.org/awards/significant-new-researcher-award/2024). I am also proud to have been the founding chair of [WiGRAPH](https://www.wigraph.org/), the ACM SIGGRAPH Affinity Group for Women in Computer Graphics Research, a program I have helped establish and grow for over a decade.
 ` as const;
 
+const courseItems = courses
+  .map(
+    (course) =>
+      `- ${course.term}: ${course.title} ([${course.code}](${course.href}))`,
+  )
+  .join('\n');
+
 const content2 = `
 ## Teaching
 
+${courseItems}
 - Fall 2019: Computational Fabrication ([CSE 556](https://courses.cs.washington.edu/courses/cse556/19au/))
 - Spring 2019: Reseach Seminar: Geometry Processing ([CSE 590-K](https://homes.cs.washington.edu/~adriana/GeoProc/index.html))
 - Winter 2019: Special Topics in Computational Fabrication ([CSE 599-J1](https://courses.cs.washington.edu/courses/cse599j1/19wi/))
@@ -29,7 +39,7 @@ const content2 = `
 ## Bio
 
 I grew up in Brazil, where I earned a Bachelor's degree in Electronics Engineering from [UFRJ](http://www.impa.br/) and a Master's in Mathematics from [IMPA](http://www.impa.br/). I completed my Ph.D. in Computer Science at [MIT](https://www.csail.mit.edu/) in 2018. After that, I spent several wonderful years at the [University of Washington](https://www.cs.washington.edu/), where I served as an Assistant Professor of Computer Science and was later promoted to Associate Professor with tenure. I joined [Brown University](https://brown.edu) in 2025.
-` as const;
+`;
 
 const components: Components = {
   a: ({ node: _node, href, children, ...props }) => {

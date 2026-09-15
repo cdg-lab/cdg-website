@@ -319,12 +319,12 @@ Edit `page.tsx` in your new folder and update:
 
 ### 3. Add to Course Listings
 
-Edit `src/app/(website)/courses/page.tsx` and add your course to the `courses` array.
+Edit `src/data/course.ts` and add your course to the `courses` array.
 
 **Important:** Add new courses to the **top** of the array so they appear first in the list.
 
 ```tsx
-const courses = [
+export const courses: CourseStub[] = [
   {
     id: 'csci-2952y-spring2026',
     code: 'CSCI 2952Y',
@@ -340,6 +340,9 @@ const courses = [
 ];
 ```
 
+This single list feeds both the `/courses` page and the Teaching section of
+Adriana's page, so there is nothing else to update.
+
 ## File Structure Reference
 
 ```
@@ -350,7 +353,8 @@ cdg-website/
 │   │       └── [project-name]/
 │   │           └── page.tsx          # Project pages
 │   ├── data/
-│   │   └── publications.bib          # All publications
+│   │   ├── publications.bib          # All publications
+│   │   └── course.ts                 # Course listings (shared by all pages)
 │   └── components/
 │       ├── ProjectComponents.tsx     # Project page components
 │       └── BibtexSection.tsx         # BibTeX display
