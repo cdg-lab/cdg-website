@@ -25,7 +25,7 @@ const courseInfo: CourseInfo = {
   ta: 'Xiaoyi Liu ("Jason") (He/Him)',
   time: 'Monday/Friday, 9:00–10:20 AM',
   location: 'CIT Center 316',
-  officeHours: 'Fridays 10:20-11:00 AM at CIT 405',
+  officeHours: 'Fridays 10:20-11:00 AM at CIT 405\n(TA) Tuesdays 2:00-3:00 PM at CIT 205',
   description: (
     <div className='space-y-4'>
       <p>
