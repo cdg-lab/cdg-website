@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   lint:
-    name: ⬣ ESLint, ʦ TypeScript, 💅 Prettier, 🃏 Test, and 📤 Autofix main
+    name: Code Check
     runs-on: ubuntu-latest
     permissions:
       contents: write
