@@ -45,11 +45,12 @@ pnpm test:watch     # Run tests in watch mode
 ### Key Directories
 
 - `/src/app/`: Next.js app router pages and layouts
-  - Individual pages: `adriana/`, `news/`, `publications/`, `team/`
+  - `(website)/`: Route group for the main site, with pages `adriana/`, `components/`, `courses/`, `news/`, `publications/`, `team/`
+  - `(course)/courses/`: Route group for individual course pages, with its own layout
   - API routes in `api/`
 - `/src/sections/`: Main frontend components for different page sections
   - `HeroSection.tsx`: Landing page hero with logo
-  - `PublicationsSection.tsx`: Publication display with filtering
+  - `PublicationsSection.tsx`: Publication list grouped by year, or recent publications only
   - `TeamSection.tsx`: Team member grid
   - `NewsSection.tsx`: News and announcements
   - `GallerySection.tsx`: Image galleries
@@ -59,11 +60,16 @@ pnpm test:watch     # Run tests in watch mode
   - `publication.ts`: Publication parser using BibTeX
   - `publications.bib`: Raw BibTeX data source
   - `news.ts`: News items and announcements
+  - `course.ts`: Shared course listings and course page types
 
 - `/src/components/`: Reusable UI components
   - `buttons/`: Various button components including BibtexButton
   - `links/`: Different link styles (ArrowLink, UnderlineLink, etc.)
   - `ui/`: Radix UI-based components
+
+- `/src/lib/`: Shared utilities (class merging, logging, Open Graph metadata, environment validation, browser storage)
+- `/src/constant/`: Site configuration and environment flags
+- `/src/styles/`: Global CSS and color palette variables
 
 ### Data Flow
 
@@ -88,7 +94,7 @@ pnpm test:watch     # Run tests in watch mode
 ### Code Quality
 
 - ESLint with TypeScript support and import sorting rules
-- Prettier with Tailwind plugin
+- Prettier
 - Husky for pre-commit hooks
 - Strict TypeScript with `noUncheckedIndexedAccess`
 
