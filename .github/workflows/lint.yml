@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   lint:
-    name: ⬣ ESLint, ʦ TypeScript, 💅 Prettier, and 🃏 Test
+    name: ⬣ ESLint, ʦ TypeScript, 💅 Prettier, 🃏 Test, and 📤 Autofix main
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -35,12 +35,12 @@ jobs:
       - name: 📥 Download deps
         run: pnpm install --frozen-lockfile
 
-      - name: 🩹 Autofix lint
+      - name: 🔬 ESLint autofix
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         continue-on-error: true
         run: pnpm exec eslint --fix src
 
-      - name: 🩹 Autofix formatting
+      - name: 💅 Prettier autofix
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: pnpm exec prettier --write . '!.github/workflows/**'
 
