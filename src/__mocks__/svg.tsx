@@ -1,11 +1,20 @@
 import * as React from 'react';
 
+type SvgMockProps = React.SVGProps<SVGSVGElement> & {
+  title?: string;
+  titleId?: string;
+};
+
 /**
- * Stands in for SVG files that SVGR imports as React components. Renders an
- * empty `<svg>` and forwards props and ref to it.
+ * Jest's stand-in for `*.svg` imports, which next.config.js turns into React
+ * components with `@svgr/webpack`. Renders an empty `<svg>` that, like SVGR's
+ * `titleProp: true` output, takes `title` and `titleId` props and renders
+ * `title` as a `<title>` element with the id given by `titleId`.
  */
-const SvgMock = React.forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
-  (props, ref) => <svg ref={ref} {...props} />,
+const SvgMock = ({ title, titleId, ...props }: SvgMockProps) => (
+  <svg aria-labelledby={titleId} {...props}>
+    {title ? <title id={titleId}>{title}</title> : null}
+  </svg>
 );
 
 export default SvgMock;
