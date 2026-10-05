@@ -13,6 +13,8 @@ jobs:
   lint:
     name: ⬣ ESLint, ʦ TypeScript, 💅 Prettier, and 🃏 Test
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v7
@@ -30,6 +32,32 @@ jobs:
 
       - name: 📥 Download deps
         run: pnpm install --frozen-lockfile
+
+      - name: 🩹 Autofix lint
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        continue-on-error: true
+        run: pnpm exec eslint --fix src
+
+      - name: 🩹 Autofix formatting
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: pnpm exec prettier --write .
+
+      - name: 📤 Push autofixes
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          HUSKY: '0'
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing to autofix."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -a -m 'style: autofix formatting'
+          if ! git push; then
+            echo "::error::git push of the autofix commit failed. If main moved after this run checked it out, the run for the newer commit applies the fixes."
+            exit 1
+          fi
 
       - name: 🔬 Lint
         run: pnpm run lint:strict
