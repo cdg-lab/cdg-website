@@ -42,8 +42,8 @@ export default function BibtexButton({
         <DialogHeader>
           <DialogTitle>BibTeX</DialogTitle>
         </DialogHeader>
-        <div className='mt-4 overflow-hidden w-full'>
-          <pre className='p-4 bg-stone-100 rounded-md overflow-x-auto'>
+        <div className='mt-4 w-full overflow-hidden'>
+          <pre className='overflow-x-auto rounded-md bg-stone-100 p-4'>
             <code>{bibtex}</code>
           </pre>
           <div className='mt-4 flex justify-end'>
