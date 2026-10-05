@@ -94,7 +94,7 @@ pnpm test:watch     # Run tests in watch mode
 ### Code Quality
 
 - ESLint with TypeScript support and import sorting rules
-- Prettier
+- Prettier with Tailwind plugin
 - Husky for pre-commit hooks
 - Strict TypeScript with `noUncheckedIndexedAccess`
 
