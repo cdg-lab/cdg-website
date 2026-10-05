@@ -16,6 +16,11 @@ const customJestConfig = {
 
   testEnvironment: 'jest-environment-jsdom',
 
+  // Skip the git worktrees under .claude/. next/jest appends
+  // testPathIgnorePatterns to its own `/node_modules/` and `/.next/`.
+  testPathIgnorePatterns: ['<rootDir>/.claude/'],
+  modulePathIgnorePatterns: ['<rootDir>/.claude/'],
+
   /**
    * Absolute imports and Module Path Aliases
    */
