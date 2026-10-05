@@ -45,12 +45,12 @@ pnpm test:watch     # Run tests in watch mode
 ### Key Directories
 
 - `/src/app/`: Next.js app router pages and layouts
-  - `(website)/`: Route group for the main site, with pages `adriana/`, `components/`, `courses/`, `news/`, `publications/`, `team/`
-  - `(course)/courses/`: Route group for individual course pages, with its own layout
+  - `(website)/`: Route group for the main site: the home page and the pages `adriana/`, `components/`, `courses/`, `news/`, `publications/`, `team/`
+  - `(course)/`: Route group for individual course pages under `courses/`, with its own layout
   - API routes in `api/`
 - `/src/sections/`: Main frontend components for different page sections
   - `HeroSection.tsx`: Landing page hero with logo
-  - `PublicationsSection.tsx`: Publication list grouped by year, or recent publications only
+  - `PublicationsSection.tsx`: Publication list grouped by year, or only the first entries of `publications.bib` when `showRecent` is set
   - `TeamSection.tsx`: Team member grid
   - `NewsSection.tsx`: News and announcements
   - `GallerySection.tsx`: Image galleries
@@ -67,7 +67,7 @@ pnpm test:watch     # Run tests in watch mode
   - `links/`: Different link styles (ArrowLink, UnderlineLink, etc.)
   - `ui/`: Radix UI-based components
 
-- `/src/lib/`: Shared utilities (class merging, logging, Open Graph metadata, environment validation, browser storage)
+- `/src/lib/`: Shared utilities (class merging, logging, Open Graph image URLs, environment validation, browser storage)
 - `/src/constant/`: Site configuration and environment flags
 - `/src/styles/`: Global CSS and color palette variables
 
