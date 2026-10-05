@@ -95,5 +95,5 @@ pnpm test:watch     # Run tests in watch mode
 ### Testing
 
 - Jest with React Testing Library
-- Tests located in `src/__tests__/`
+- Tests live in `src/lib/__tests__/`; `jest.config.js` sets no `testMatch` or `roots`, so Jest picks up any `.js`/`.jsx`/`.ts`/`.tsx` file in a `__tests__/` directory or named `*.test.*`/`*.spec.*`, anywhere under the repo root
 - SVG mocking for tests
