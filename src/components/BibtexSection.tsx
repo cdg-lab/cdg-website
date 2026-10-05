@@ -27,11 +27,11 @@ export default function BibtexSection({
           onClick={handleCopy}
           variant='light'
           size='sm'
-          className='absolute top-2 right-2 z-10'
+          className='absolute right-2 top-2 z-10'
         >
           {copied ? 'Copied' : 'Copy'}
         </Button>
-        <pre className='p-4 bg-stone-200 rounded-md shadow-inner overflow-x-auto'>
+        <pre className='overflow-x-auto rounded-md bg-stone-200 p-4 shadow-inner'>
           <code>{children}</code>
         </pre>
       </div>

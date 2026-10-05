@@ -58,14 +58,14 @@ export default function Header() {
         <div className='layout flex h-16 items-center justify-between'>
           <UnstyledLink
             href='/'
-            className='hidden text-xl font-bold text-stone-800 md:flex gap-2'
+            className='hidden gap-2 text-xl font-bold text-stone-800 md:flex'
           >
             <FlatLogo className='h-6 w-auto' />
             Computational Design Group
           </UnstyledLink>
           <UnstyledLink
             href='/'
-            className='md:hidden text-xl font-bold text-stone-800 flex gap-2'
+            className='flex gap-2 text-xl font-bold text-stone-800 md:hidden'
           >
             <FlatLogo className='h-6 w-auto' />
             CDG
@@ -88,7 +88,7 @@ export default function Header() {
 
       <div
         className={cn(
-          'fixed top-0 left-0 h-screen w-full bg-white/80 pt-40 backdrop-blur-md transition-opacity duration-300 ease-in-out md:hidden',
+          'fixed left-0 top-0 h-screen w-full bg-white/80 pt-40 backdrop-blur-md transition-opacity duration-300 ease-in-out md:hidden',
           isOpen ? 'opacity-100' : 'invisible opacity-0',
         )}
         onClick={() => setIsOpen(false)}

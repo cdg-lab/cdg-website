@@ -209,7 +209,7 @@ export default function Page() {
       </Section>
 
       <Section title='Video'>
-        <div className='rounded-md shadow-small p-2 mt-4 bg-white'>
+        <div className='mt-4 rounded-md bg-white p-2 shadow-small'>
           <video
             width='1080'
             height='360'
