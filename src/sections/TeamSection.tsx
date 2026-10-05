@@ -25,9 +25,9 @@ const TeamMember = ({ person }: { person: Profile }) => {
       <UnderlineLink href={person.website} className='text-xl font-semibold'>
         {name}
       </UnderlineLink>
-      <p className='text-stone-600 mt-2'>{person.position}</p>
+      <p className='mt-2 text-stone-600'>{person.position}</p>
       {person.firstNames[0] !== 'Adriana' && (
-        <p className='text-stone-500 text-sm mt-1 font-light'>
+        <p className='mt-1 text-sm font-light text-stone-500'>
           {`${person.joined} – ${person.until ?? 'Present'}`}
         </p>
       )}
@@ -55,7 +55,7 @@ export default function TeamSection({
         </div>
         {!showCurrent && (
           <div>
-            <h2 className='mt-20 mb-12 text-3xl font-bold text-stone-600'>
+            <h2 className='mb-12 mt-20 text-3xl font-bold text-stone-600'>
               Alumni
             </h2>
             <div className='grid max-w-5xl grid-cols-2 gap-8 md:grid-cols-4'>
@@ -66,7 +66,7 @@ export default function TeamSection({
           </div>
         )}
         {showCurrent && (
-          <div className='flex flex-col items-center mt-12'>
+          <div className='mt-12 flex flex-col items-center'>
             <ArrowLink as={ButtonLink} variant='light' href='/team'>
               View All Members
             </ArrowLink>
