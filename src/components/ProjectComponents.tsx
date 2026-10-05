@@ -31,7 +31,7 @@ interface Project {
 
 function AuthorView({ author }: { author: Author }) {
   const remark = author.remark ? (
-    <span className='text-stone-600 align-super text-sm'>{author.remark}</span>
+    <span className='align-super text-sm text-stone-600'>{author.remark}</span>
   ) : null;
   const link = author.href ? (
     <UnderlineLink href={author.href} className='text-lg md:text-xl'>
@@ -59,10 +59,10 @@ function ProjectView({
     <div className='min-h-screen'>
       <div className='bg-stone-50 py-12'>
         <div className='layout'>
-          <h1 className='text-3xl md:text-4xl font-bold text-stone-800'>
+          <h1 className='text-3xl font-bold text-stone-800 md:text-4xl'>
             {project.title}
           </h1>
-          <div className='mt-4 flex flex-row gap-x-2 flex-wrap'>
+          <div className='mt-4 flex flex-row flex-wrap gap-x-2'>
             {project.authors.map((author, i) => (
               <div key={i} className='flex'>
                 <AuthorView author={author} />
@@ -73,10 +73,10 @@ function ProjectView({
             ))}
           </div>
           {project.authorRemarks && (
-            <div className='mt-3 text-stone-600 flex flex-row gap-x-2 flex-wrap'>
+            <div className='mt-3 flex flex-row flex-wrap gap-x-2 text-stone-600'>
               {Object.entries(project.authorRemarks).map(([key, value]) => (
                 <div key={key} className=''>
-                  <span className='text-xs align-super text-stone-500'>
+                  <span className='align-super text-xs text-stone-500'>
                     {key}
                   </span>
                   <span>{value}</span>
@@ -89,7 +89,7 @@ function ProjectView({
               <span>{project.venue}</span>
             </div>
           )}
-          <div className='mt-4 flex flex-row gap-2 flex-wrap'>
+          <div className='mt-4 flex flex-row flex-wrap gap-2'>
             {project.links.map((link) => (
               <ButtonLink
                 key={link.href}
@@ -108,10 +108,10 @@ function ProjectView({
                 height={256}
                 src={project.teaser}
                 alt={project.title ?? ''}
-                className='p-4 bg-white flex-shrink-0 rounded-md object-contain shadow-small'
+                className='flex-shrink-0 rounded-md bg-white object-contain p-4 shadow-small'
               />
               {project.teaser_description && (
-                <p className='px-2 mt-3 text-sm text-stone-500'>
+                <p className='mt-3 px-2 text-sm text-stone-500'>
                   {project.teaser_description}
                 </p>
               )}
