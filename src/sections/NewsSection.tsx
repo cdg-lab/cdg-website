@@ -9,7 +9,7 @@ import ButtonLink from '@/components/links/ButtonLink';
 
 function NewsItem({ item }: { item: News }) {
   return (
-    <div className='bg-white shadow-sm border border-stone-200 rounded-lg p-4 flex-1 min-w-[300px]'>
+    <div className='min-w-[300px] flex-1 rounded-lg border border-stone-200 bg-white p-4 shadow-sm'>
       <p className='text-sm text-stone-500'>
         {item.date.toLocaleDateString('en-US', {
           year: 'numeric',
@@ -19,7 +19,7 @@ function NewsItem({ item }: { item: News }) {
       </p>
       <h3 className='mt-1 text-xl font-semibold'>{item.title}</h3>
       {item.content && (
-        <p className='mt-2 text-stone-600 text-sm'>{item.content}</p>
+        <p className='mt-2 text-sm text-stone-600'>{item.content}</p>
       )}
       {item.image && (
         <Image
@@ -46,7 +46,7 @@ export default async function NewsSection({
 }) {
   const newsToShow = showRecent ? news.slice(0, 6) : news;
   return (
-    <section id='news' className='py-20 bg-stone-50'>
+    <section id='news' className='bg-stone-50 py-20'>
       <div className='layout'>
         <h2 className='mb-12 text-center text-3xl font-bold text-stone-800'>
           {showRecent ? 'Recent News' : 'News'}
@@ -57,7 +57,7 @@ export default async function NewsSection({
           ))}
         </div>
         {showRecent && (
-          <div className='flex flex-col items-center mt-8'>
+          <div className='mt-8 flex flex-col items-center'>
             <ArrowLink as={ButtonLink} variant='light' href='/news'>
               View All News
             </ArrowLink>
