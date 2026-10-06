@@ -13,9 +13,9 @@ export default function CoursesPage() {
   return (
     <div className='min-h-screen'>
       <section className='bg-gradient-to-b from-stone-50 to-white py-8'>
-        <div className='max-w-[1100px] mx-auto px-2 xl:px-0'>
+        <div className='mx-auto max-w-[1100px] px-2 xl:px-0'>
           <div className='mb-8'>
-            <h1 className='text-4xl font-bold text-stone-800 mb-2'>Courses</h1>
+            <h1 className='mb-2 text-4xl font-bold text-stone-800'>Courses</h1>
             <p className='text-lg text-stone-600'>
               Courses offered by the Computational Design Group at Brown
               University
@@ -29,28 +29,28 @@ export default function CoursesPage() {
                 href={course.href}
                 className='group block rounded-lg bg-white px-6 py-6 shadow-small transition-all hover:shadow-medium'
               >
-                <div className='flex justify-between items-start mb-4'>
+                <div className='mb-4 flex items-start justify-between'>
                   <div>
-                    <h2 className='text-2xl font-bold text-stone-800 group-hover:text-primary-700 transition-colors'>
+                    <h2 className='text-2xl font-bold text-stone-800 transition-colors group-hover:text-primary-700'>
                       {course.code}
                     </h2>
-                    <p className='text-lg text-stone-600 mt-1'>
+                    <p className='mt-1 text-lg text-stone-600'>
                       {course.title}
                     </p>
                   </div>
                   <div className='flex gap-2'>
                     {i == 0 && (
-                      <span className='inline-block px-3 py-1 text-sm font-medium text-green-700 bg-green-50 rounded-full'>
+                      <span className='inline-block rounded-full bg-green-50 px-3 py-1 text-sm font-medium text-green-700'>
                         Current
                       </span>
                     )}
-                    <span className='inline-block px-3 py-1 text-sm font-medium text-blue-700 bg-blue-50 rounded-full'>
+                    <span className='inline-block rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700'>
                       {course.term}
                     </span>
                   </div>
                 </div>
 
-                <p className='text-stone-600 mb-4 line-clamp-2'>
+                <p className='mb-4 line-clamp-2 text-stone-600'>
                   {course.description}
                 </p>
 
@@ -69,7 +69,7 @@ export default function CoursesPage() {
                   </div>
                 </div>
 
-                <div className='mt-4 text-primary-600 group-hover:text-primary-700 font-medium text-sm'>
+                <div className='mt-4 text-sm font-medium text-primary-600 group-hover:text-primary-700'>
                   View course details →
                 </div>
               </Link>

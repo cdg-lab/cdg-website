@@ -70,3 +70,6 @@ jobs:
 
       - name: 💅 Prettier check
         run: pnpm run format:check
+
+      - name: 🃏 Test
+        run: pnpm run test
