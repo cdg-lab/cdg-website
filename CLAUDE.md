@@ -95,7 +95,7 @@ pnpm test:watch     # Run tests in watch mode
 
 - ESLint with TypeScript support and import sorting rules
 - Prettier with Tailwind plugin
-- Husky for pre-commit hooks
+- Husky git hooks: lint-staged on pre-commit, commitlint on commit-msg, `pnpm install` on post-merge
 - Strict TypeScript with `noUncheckedIndexedAccess`
 
 ### Testing
