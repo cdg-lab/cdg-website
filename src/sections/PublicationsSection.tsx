@@ -49,7 +49,7 @@ const PublicationView = ({ publication }: { publication: Publication }) => {
     : publication.year?.toString();
 
   return (
-    <div className='flex flex-col md:flex-row items-start gap-4 border-gray-200 py-4'>
+    <div className='flex flex-col items-start gap-4 border-gray-200 py-4 md:flex-row'>
       {publication.image && (
         <Image
           width={256}
@@ -75,7 +75,7 @@ const PublicationView = ({ publication }: { publication: Publication }) => {
             ),
           ])}
         </p>
-        <p className='mt-1 text-stone-600 font-light text-sm'>
+        <p className='mt-1 text-sm font-light text-stone-600'>
           {publication.venue && (
             <span className='italic'>{publication.venue}</span>
           )}
@@ -173,7 +173,7 @@ export default async function PublicationsSection({
                 ))
             : sortedYears.map((year) => (
                 <div key={year} className='mt-12 first:mt-0'>
-                  <h3 className='mb-2 pt-4 text-3xl font-semibold text-stone-400 text-right border-t border-stone-200'>
+                  <h3 className='mb-2 border-t border-stone-200 pt-4 text-right text-3xl font-semibold text-stone-400'>
                     {year}
                   </h3>
                   {publicationsByYear[year]?.map((p) => (
@@ -183,7 +183,7 @@ export default async function PublicationsSection({
               ))}
         </div>
         {showRecent && (
-          <div className='flex flex-col items-center mt-8'>
+          <div className='mt-8 flex flex-col items-center'>
             <ArrowLink as={ButtonLink} variant='light' href='/publications'>
               View All Publications
             </ArrowLink>
