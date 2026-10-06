@@ -14,10 +14,10 @@ import Logo from '~/svg/MainLogo.svg';
 export default function HeroSection() {
   return (
     <section className='flex items-center bg-gradient-to-b from-stone-50 to-stone-100'>
-      <div className='layout flex flex-col md:flex-row items-center justify-center py-8 gap-4'>
+      <div className='layout flex flex-col items-center justify-center gap-4 py-8 md:flex-row'>
         <Logo className='w-[128px] md:w-[256px]' />
         <div className='text-center md:text-left'>
-          <h1 className='text-3xl md:text-4xl font-bold leading-tight text-stone-600 mt-2'>
+          <h1 className='mt-2 text-3xl font-bold leading-tight text-stone-600 md:text-4xl'>
             Computational Design Group (CDG)
           </h1>
           <p className='mt-4 text-stone-500'>

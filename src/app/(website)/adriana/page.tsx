@@ -56,13 +56,13 @@ const components: Components = {
 
 export default function Page() {
   return (
-    <section id='adriana-bio' className='py-12 bg-stone-50'>
+    <section id='adriana-bio' className='bg-stone-50 py-12'>
       <div className='layout'>
-        <div className='grid grid-cols-1 md:grid-cols-[fit-content(256px)_1fr] gap-12'>
+        <div className='grid grid-cols-1 gap-12 md:grid-cols-[fit-content(256px)_1fr]'>
           {/* Left column for image and contact info */}
           <div className=''>
             <div className=''>
-              <div className='w-full max-w-[256px] h-auto mx-auto md:mx-0 mb-6 overflow-hidden rounded-lg bg-gray-300 shadow-lg'>
+              <div className='mx-auto mb-6 h-auto w-full max-w-[256px] overflow-hidden rounded-lg bg-gray-300 shadow-lg md:mx-0'>
                 <Image
                   src='/images/profile/adriana-full.jpg'
                   alt='Profile picture of Adriana'
@@ -71,7 +71,7 @@ export default function Page() {
                   className='h-full w-full object-cover'
                 />
               </div>
-              <div className='text-sm text-stone-700 space-y-1 text-center md:text-left'>
+              <div className='space-y-1 text-center text-sm text-stone-700 md:text-left'>
                 <div>Associate Professor</div>
                 <div>Brown University</div>
                 <div>adriana_schulz [at] brown.edu</div>
@@ -80,12 +80,12 @@ export default function Page() {
           </div>
           {/* Right column for name and bio */}
           <div className=''>
-            <h2 className='mb-6 text-5xl font-bold text-stone-800 tracking-tight'>
+            <h2 className='mb-6 text-5xl font-bold tracking-tight text-stone-800'>
               Adriana Schulz
             </h2>
-            <div className='prose prose-stone prose-a:no-underline max-w-none'>
+            <div className='prose prose-stone max-w-none prose-a:no-underline'>
               <ReactMarkdown components={components}>{content}</ReactMarkdown>
-              <div className='flex flex-col mt-4 gap-4 items-start'>
+              <div className='mt-4 flex flex-col items-start gap-4'>
                 <ArrowLink as={ButtonLink} variant='light' href='/'>
                   View my Publications, News, and more
                 </ArrowLink>
