@@ -60,7 +60,7 @@ git push
 
 **Important: Commit Message Format**
 
-This repository uses [conventional commits](https://www.conventionalcommits.org/). Your commit message **must** follow this format or the pre-commit hook will fail:
+This repository uses [conventional commits](https://www.conventionalcommits.org/). Your commit message **must** follow this format or the commit-msg hook will fail:
 
 ```
 <type>: <description>
