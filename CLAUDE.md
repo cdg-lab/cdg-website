@@ -95,5 +95,5 @@ pnpm test:watch     # Run tests in watch mode
 ### Testing
 
 - Jest with React Testing Library
-- Tests located in `src/__tests__/`
+- Tests located in `src/lib/__tests__/`
 - SVG mocking for tests
