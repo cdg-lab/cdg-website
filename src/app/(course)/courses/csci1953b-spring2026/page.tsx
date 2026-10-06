@@ -157,9 +157,9 @@ export default function CoursePage() {
   return (
     <div className='min-h-screen'>
       <section className='bg-gradient-to-b from-stone-50 to-white py-8'>
-        <div className='max-w-[1100px] mx-auto px-2 xl:px-0'>
+        <div className='mx-auto max-w-[1100px] px-2 xl:px-0'>
           <div>
-            <h1 className='text-4xl font-bold text-stone-800 mb-1'>
+            <h1 className='mb-1 text-4xl font-bold text-stone-800'>
               {courseInfo.code}
             </h1>
             <p className='text-xl text-stone-600'>{courseInfo.title}</p>
@@ -167,11 +167,11 @@ export default function CoursePage() {
 
           <div className='mt-8 grid gap-8 md:grid-cols-3'>
             <div className='md:col-span-2'>
-              <div className='rounded-lg bg-white px-2 py-6 md:px-6 shadow-small'>
+              <div className='rounded-lg bg-white px-2 py-6 shadow-small md:px-6'>
                 <h2 className='mb-4 text-2xl font-semibold text-stone-800'>
                   Course Description
                 </h2>
-                <p className='text-stone-600 leading-relaxed mb-4'>
+                <p className='mb-4 leading-relaxed text-stone-600'>
                   {courseInfo.description}
                 </p>
                 <div className='flex justify-start gap-2'>
@@ -192,17 +192,17 @@ export default function CoursePage() {
                 </div>
               </div>
 
-              <div className='mt-6 rounded-lg bg-white px-2 py-6 md:px-6 shadow-small'>
+              <div className='mt-6 rounded-lg bg-white px-2 py-6 shadow-small md:px-6'>
                 <h2 className='mb-4 text-2xl font-semibold text-stone-800'>
                   Grading
                 </h2>
                 <table className='w-full text-sm'>
                   <thead>
                     <tr className='border-b border-stone-200'>
-                      <th className='text-left py-2 text-stone-700'>
+                      <th className='py-2 text-left text-stone-700'>
                         Component
                       </th>
-                      <th className='text-right py-2 text-stone-700'>
+                      <th className='py-2 text-right text-stone-700'>
                         Percentage
                       </th>
                     </tr>
@@ -225,20 +225,20 @@ export default function CoursePage() {
                 </table>
               </div>
 
-              <div className='mt-6 rounded-lg bg-white px-2 py-6 md:px-6 shadow-small'>
+              <div className='mt-6 rounded-lg bg-white px-2 py-6 shadow-small md:px-6'>
                 <h2 className='mb-4 text-2xl font-semibold text-stone-800'>
                   Assignments
                 </h2>
                 <table className='w-full text-sm'>
                   <thead>
                     <tr className='border-b border-stone-200'>
-                      <th className='text-left py-2 text-stone-700'>
+                      <th className='py-2 text-left text-stone-700'>
                         Assignment
                       </th>
-                      <th className='text-center py-2 text-stone-700'>
+                      <th className='py-2 text-center text-stone-700'>
                         Released
                       </th>
-                      <th className='text-center py-2 text-stone-700'>Due</th>
+                      <th className='py-2 text-center text-stone-700'>Due</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -259,17 +259,17 @@ export default function CoursePage() {
                 </table>
               </div>
 
-              <div className='mt-6 rounded-lg bg-white px-2 py-6 md:px-6 shadow-small'>
+              <div className='mt-6 rounded-lg bg-white px-2 py-6 shadow-small md:px-6'>
                 <h2 className='mb-4 text-2xl font-semibold text-stone-800'>
                   Final Project
                 </h2>
                 <table className='w-full text-sm'>
                   <thead>
                     <tr className='border-b border-stone-200'>
-                      <th className='text-left py-2 text-stone-700'>
+                      <th className='py-2 text-left text-stone-700'>
                         Milestone
                       </th>
-                      <th className='text-right py-2 text-stone-700'>Date</th>
+                      <th className='py-2 text-right text-stone-700'>Date</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -290,7 +290,7 @@ export default function CoursePage() {
                 </table>
               </div>
 
-              <div className='mt-6 rounded-lg bg-white px-2 py-6 md:px-6 shadow-small'>
+              <div className='mt-6 rounded-lg bg-white px-2 py-6 shadow-small md:px-6'>
                 <h2 className='mb-4 text-2xl font-semibold text-stone-800'>
                   Lectures
                 </h2>
@@ -298,7 +298,7 @@ export default function CoursePage() {
                   {schedule.map((entry, idx) => (
                     <div
                       key={idx}
-                      className={`flex justify-between py-2 px-2 rounded ${
+                      className={`flex justify-between rounded px-2 py-2 ${
                         entry.topic.includes('No class')
                           ? 'bg-gray-100 text-gray-500'
                           : entry.topic.includes('Project') ||
@@ -307,11 +307,11 @@ export default function CoursePage() {
                             : ''
                       }`}
                     >
-                      <span className='text-sm text-stone-600 min-w-[100px]'>
+                      <span className='min-w-[100px] text-sm text-stone-600'>
                         {entry.date}
                       </span>
                       <span
-                        className={`flex-1 ml-4 text-sm ${
+                        className={`ml-4 flex-1 text-sm ${
                           entry.topic.includes('No class')
                             ? 'text-gray-500'
                             : entry.topic.includes('Project') ||
@@ -328,7 +328,7 @@ export default function CoursePage() {
                             <a
                               key={linkIdx}
                               href={link.href}
-                              className='text-xs text-blue-600 hover:text-blue-800 underline'
+                              className='text-xs text-blue-600 underline hover:text-blue-800'
                             >
                               {link.label}
                             </a>
@@ -338,7 +338,7 @@ export default function CoursePage() {
                     </div>
                   ))}
                 </div>
-                <p className='mt-6 text-xs text-stone-500 italic'>
+                <p className='mt-6 text-xs italic text-stone-500'>
                   Note: The lecture plan is tentative and subject to change.
                   Slides will be posted and updated throughout the course.
                 </p>
@@ -356,7 +356,7 @@ export default function CoursePage() {
                 />
               </div>
 
-              <div className='mt-6 rounded-lg bg-white px-2 py-6 md:px-6 shadow-small'>
+              <div className='mt-6 rounded-lg bg-white px-2 py-6 shadow-small md:px-6'>
                 <h2 className='mb-4 text-xl font-semibold text-stone-800'>
                   Course Logistics
                 </h2>

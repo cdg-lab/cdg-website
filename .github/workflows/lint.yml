@@ -11,25 +11,56 @@ concurrency:
 
 jobs:
   lint:
-    name: ⬣ ESLint, ʦ TypeScript, 💅 Prettier, and 🃏 Test
+    name: Code Check
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: ⬇️ Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
 
       - name: 🤌 Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: 9
 
       - name: ⎔ Setup node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version-file: .nvmrc
           cache: 'pnpm'
 
       - name: 📥 Download deps
         run: pnpm install --frozen-lockfile
+
+      - name: 🔬 ESLint autofix
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        continue-on-error: true
+        run: pnpm exec eslint --fix src
+
+      - name: 💅 Prettier autofix
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: pnpm exec prettier --write . '!.github/workflows/**'
+
+      - name: 📤 Commit and push autofixes
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          HUSKY: '0'
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -z "$(git status --porcelain --untracked-files=no)" ]; then
+            echo "Autofixes changed no tracked files."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -a -m 'style: apply ESLint and Prettier autofixes'
+          if ! git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main; then
+            echo "::error::Pushing the autofix commit to main failed."
+            exit 1
+          fi
 
       - name: 🔬 Lint
         run: pnpm run lint:strict
@@ -39,3 +70,6 @@ jobs:
 
       - name: 💅 Prettier check
         run: pnpm run format:check
+
+      - name: 🃏 Test
+        run: pnpm run test

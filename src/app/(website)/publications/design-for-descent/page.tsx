@@ -78,7 +78,7 @@ export default function Page() {
         </p>
       </Section>
       <Section title='Optimization towards Target Images'>
-        <div className='rounded-md shadow-small p-2 mt-4 bg-white'>
+        <div className='mt-4 rounded-md bg-white p-2 shadow-small'>
           <video
             width='1080'
             height='360'
@@ -91,7 +91,7 @@ export default function Page() {
         </div>
       </Section>
       <Section title='Optimization towards Text Prompts using SDS Loss'>
-        <div className='rounded-md shadow-small p-2 mt-4 bg-white'>
+        <div className='mt-4 rounded-md bg-white p-2 shadow-small'>
           <video
             width='1080'
             height='360'
@@ -104,7 +104,7 @@ export default function Page() {
         </div>
       </Section>
       <Section title='Topology Optimization'>
-        <div className='rounded-md shadow-small p-2 mt-4 bg-white'>
+        <div className='mt-4 rounded-md bg-white p-2 shadow-small'>
           <video
             width='1080'
             height='360'
