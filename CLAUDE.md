@@ -45,11 +45,12 @@ pnpm test:watch     # Run tests in watch mode
 ### Key Directories
 
 - `/src/app/`: Next.js app router pages and layouts
-  - Individual pages: `adriana/`, `news/`, `publications/`, `team/`
+  - `(website)/`: Route group for the main site, whose layout uses `Header`, with the home page, `adriana/`, `components/`, `courses/` (course index), `news/`, `publications/`, `team/`
+  - `(course)/`: Route group for individual course pages (`courses/<course-id>/`), whose layout uses `CourseHeader`
   - API routes in `api/`
 - `/src/sections/`: Main frontend components for different page sections
   - `HeroSection.tsx`: Landing page hero with logo
-  - `PublicationsSection.tsx`: Publication display with filtering
+  - `PublicationsSection.tsx`: Publications grouped by year, newest first; with `showRecent`, the first entries of `publications.bib`, ungrouped
   - `TeamSection.tsx`: Team member grid
   - `NewsSection.tsx`: News and announcements
   - `GallerySection.tsx`: Image galleries
@@ -59,11 +60,16 @@ pnpm test:watch     # Run tests in watch mode
   - `publication.ts`: Publication parser using BibTeX
   - `publications.bib`: Raw BibTeX data source
   - `news.ts`: News items and announcements
+  - `course.ts`: `courses` listing (`CourseStub[]`) and the types for course pages
 
 - `/src/components/`: Reusable UI components
   - `buttons/`: Various button components including BibtexButton
   - `links/`: Different link styles (ArrowLink, UnderlineLink, etc.)
   - `ui/`: Radix UI-based components
+
+- `/src/lib/`: Shared utilities (`cn` class merging, `logger`, Open Graph image URLs, environment validation, browser storage reads)
+- `/src/constant/`: Site configuration and environment flags
+- `/src/styles/`: Global CSS and color palette variables
 
 ### Data Flow
 
