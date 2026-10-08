@@ -3,6 +3,7 @@ export type Position =
   | 'Postdoctoral Researcher'
   | 'PhD Student'
   | 'Master Student'
+  | 'Undergraduate Student'
   | 'Former PhD Student'
   | 'Former Visiting Student'
   | 'Former Postdoctoral Researcher';
@@ -178,6 +179,14 @@ export const people: Profile[] = [
     joined: 2025,
     website: 'https://oras-p.com/',
   },
+  {
+    firstNames: ['Yali'],
+    lastName: 'Sommer',
+    position: 'Undergraduate Student',
+    image: 'profile/yali.jpg',
+    joined: 2026,
+    website: 'https://yalisommer.com/',
+  },
 ];
 
 const POSITION_ORDER = {
@@ -185,6 +194,7 @@ const POSITION_ORDER = {
   'Postdoctoral Researcher': 1,
   'PhD Student': 2,
   'Master Student': 2,
+  'Undergraduate Student': 2,
   'Former PhD Student': 3,
   'Former Postdoctoral Researcher': 3,
   'Former Visiting Student': 3,
