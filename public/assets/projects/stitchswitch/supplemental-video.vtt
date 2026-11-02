@@ -1,0 +1,165 @@
+WEBVTT
+
+00:00:03.120 --> 00:00:08.560
+The StitchSwitch primitive is bistable
+consisting of a pop up state and a pop
+
+00:00:08.560 --> 00:00:18.800
+down state that is easily actuated and remains
+stable in either state without continuous force.
+
+00:00:18.800 --> 00:00:24.800
+We embroider triangle tessellated patterns onto
+pre-stretched elastic fabric locally stiffening
+
+00:00:24.800 --> 00:00:30.000
+the stitched regions. When released, the
+surrounding fabric contracts while the embroidered
+
+00:00:30.000 --> 00:00:35.520
+region resists, creating a tension mismatch that
+drives the surface out of plane. The symmetric
+
+00:00:35.520 --> 00:00:41.920
+tessellation distributes these forces evenly. We
+parameterize each patch by its fill percentage
+
+00:00:41.920 --> 00:00:48.240
+and diameter. As patch diameter increases, the
+overall deformation grows in height. As fill
+
+00:00:48.240 --> 00:00:53.440
+percentage increases, the silhouette shifts from
+smooth dome-like curvature to flatter centers with
+
+00:00:53.440 --> 00:01:00.240
+sharper edges. Below a threshold of size and fill,
+patches remain nearly flat. They no longer exhibit
+
+00:01:00.240 --> 00:01:06.160
+bistable behavior. This allows us to create
+designs like this with a constrained bistable
+
+00:01:06.160 --> 00:01:12.640
+region within a non-bistable non-circular bounding
+shape. We introduce a data-driven simulation
+
+00:01:12.640 --> 00:01:18.080
+model that predicts deformation from patch
+parameters. Starting from a flat initialization,
+
+00:01:18.080 --> 00:01:23.920
+the model minimizes elastic energy, producing
+puckering and converging to a stable profile.
+
+00:01:23.920 --> 00:01:28.640
+It represents the fabric as radial strips with
+higher stiffness in the embroidered region,
+
+00:01:28.640 --> 00:01:32.960
+capturing both stretching and bending.
+Across the design space, it predicts
+
+00:01:32.960 --> 00:01:40.560
+resulting height and silhouette. We use this
+to drive the UI with predictive simulation.
+
+00:01:40.560 --> 00:01:44.320
+We provide an interactive design tool
+that supports a full workflow from
+
+00:01:44.320 --> 00:01:48.400
+layout to fabrication. Users can load
+garment panels and place StitchSwitch
+
+00:01:48.400 --> 00:01:53.440
+patches directly onto the fabric layout.
+Each patch is parameterized by diameter and
+
+00:01:53.440 --> 00:01:58.880
+fill percentage with a linked 3D view providing
+real-time preview of the resulting deformation.
+
+00:01:58.880 --> 00:02:03.920
+The system also supports inverse design, allowing
+users to specify target deformation and retrieve
+
+00:02:03.920 --> 00:02:09.520
+compatible parameter combinations. In fabrication
+mode, the tool automatically arranges patches into
+
+00:02:09.520 --> 00:02:15.040
+embroidery hoops based on available hoop sizes
+and checks constraints such as hoop fit, spacing,
+
+00:02:15.040 --> 00:02:20.720
+and minimum feature size. If constraints are
+violated, users are guided back to design mode to
+
+00:02:20.720 --> 00:02:31.120
+adjust parameters. Final designs can be exported
+directly as machine compatible embroidery files.
+
+00:02:31.120 --> 00:02:33.680
+Using the design and hoop assignments from the UI,
+
+00:02:33.680 --> 00:02:38.000
+we prepare the fabric panel and stretch
+it uniformly and secure it in a hoop with
+
+00:02:38.000 --> 00:02:44.320
+stabilizer. We stitch the generated patterns
+directly onto the fabric. After stitching,
+
+00:02:44.320 --> 00:02:55.360
+the fabric is released and the stabilizer is
+removed. We do this again with the second hoop.
+
+00:02:55.360 --> 00:03:01.920
+The stabilizer is thoroughly washed away and
+our programmed deformation emerges. We integrate
+
+00:03:01.920 --> 00:03:07.600
+StitchSwitch directly into garments. Here, a
+bistable embroider patch forms a deformation-based
+
+00:03:07.600 --> 00:03:13.200
+pocket for a tennis skirt to hold a tennis ball
+securely without requiring additional seams or
+
+00:03:13.200 --> 00:03:18.720
+inserts. This demonstrates how deformation can
+be used in garment construction with embedded
+
+00:03:18.720 --> 00:03:23.760
+functionality. The tessellation also enables
+programmable placement of conductive thread for
+
+00:03:23.760 --> 00:03:29.200
+sensing. We demonstrate sensing in our second
+application. Motivated by low vision users,
+
+00:03:29.200 --> 00:03:34.880
+we design a programmable garment interface. We
+integrate tactile buttons and braille labels
+
+00:03:34.880 --> 00:03:42.400
+directly into the fabric, encoding
+easy access to common shortcuts.
+
+00:03:42.400 --> 00:03:45.600
+Your current location is [
+] University, [ ] Street.
+
+00:03:45.600 --> 00:04:00.000
+January 1st, one at 22:47. Navigating home.
+
+00:04:00.000 --> 00:04:05.360
+Calling favorite person one.
+
+00:04:05.360 --> 00:04:12.400
+Calling favorite person two.
+
+00:04:12.400 --> 00:04:16.826
+Last unread message from favorite person
+three: "Hope paper writing is going well."
