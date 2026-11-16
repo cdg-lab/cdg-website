@@ -61,7 +61,7 @@ export const news: News[] = [
   },
   {
     date: new Date('2025-08-19'),
-    title: 'Adriana Schulz Joins Brown CS',
+    title: 'Computational Design Group moves to Brown CS',
     content:
       'Adriana Schulz has joined the Department of Computer Science at Brown University as an Associate Professor, moving from the University of Washington.',
     link: 'https://cs.brown.edu/news/2025/08/19/adriana-schulz-joins-brown-cs-as-associate-professor/',
@@ -85,7 +85,7 @@ export const news: News[] = [
     date: new Date('2026-09-01'),
     title: 'Three New PhD Students Join the Lab',
     content:
-      'Welcome to Joanna Yoo, Alice Wei and Jackie Aslarus, who join the lab as PhD students in fall 2026.',
+      'Huge welcome to Joanna Yoo, Alice Wei, and Jackie Aslarus, who join the lab as PhD students in Fall 2026.',
   },
   {
     date: new Date('2026-10-21'),
