@@ -171,6 +171,13 @@ export const people: Profile[] = [
     website: 'https://aliceweiziyu.com/',
   },
   {
+    firstNames: ['Jackie'],
+    lastName: 'Aslarus',
+    position: 'PhD Student',
+    image: 'profile/jackie.jpg',
+    joined: 2026,
+  },
+  {
     firstNames: ['Oras'],
     lastName: 'Phongpanangam',
     position: 'Master Student',
