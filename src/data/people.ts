@@ -51,7 +51,7 @@ export const people: Profile[] = [
     image: 'profile/yuxuan.jpg',
     joined: 2018,
     until: 2025,
-    website: 'https://homes.cs.washington.edu/~ym2552/',
+    website: 'https://merlinyx.github.io/index.html',
   },
   {
     firstNames: ['Amy'],

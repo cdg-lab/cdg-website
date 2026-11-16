@@ -46,7 +46,7 @@ export const news: News[] = [
     date: new Date('2025-05-14'),
     title: 'Yuxuan Mei Defends PhD Thesis',
     content:
-      'Congratulations to Yuxuan Mei on defending his PhD thesis titled: "Design for Sustainable Fabrication". She is joining Wesleyan University as an Assistant Professor.',
+      'Congratulations to Yuxuan Mei on defending her PhD thesis titled: "Design for Sustainable Fabrication". She is joining Wesleyan University as an Assistant Professor.',
   },
   {
     date: new Date('2025-06-05'),
