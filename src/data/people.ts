@@ -15,7 +15,7 @@ export type Profile = {
   image: string;
   joined: number;
   until?: number;
-  website: string;
+  website?: string;
 };
 
 export const people: Profile[] = [
@@ -136,7 +136,6 @@ export const people: Profile[] = [
     lastName: 'Liu',
     position: 'PhD Student',
     joined: 2025,
-    website: '#',
     image: 'profile/jason.jpg',
   },
   {

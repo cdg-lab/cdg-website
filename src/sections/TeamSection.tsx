@@ -9,22 +9,37 @@ import UnderlineLink from '@/components/links/UnderlineLink';
 
 const TeamMember = ({ person }: { person: Profile }) => {
   const name = `${person.firstNames[0]} ${person.lastName}`;
+  const image = (
+    <div className='mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full bg-gray-300 shadow-medium'>
+      <Image
+        src={`/images/${person.image}`}
+        alt={`Profile picture of ${name}`}
+        width={128}
+        height={128}
+        className='h-full w-full object-cover'
+      />
+    </div>
+  );
   return (
     <div className='text-center'>
-      <Link href={person.website} target='_blank' rel='noopener noreferrer'>
-        <div className='mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full bg-gray-300 shadow-medium'>
-          <Image
-            src={`/images/${person.image}`}
-            alt={`Profile picture of ${name}`}
-            width={128}
-            height={128}
-            className='h-full w-full object-cover'
-          />
-        </div>
-      </Link>
-      <UnderlineLink href={person.website} className='text-xl font-semibold'>
-        {name}
-      </UnderlineLink>
+      {person.website ? (
+        <>
+          <Link href={person.website} target='_blank' rel='noopener noreferrer'>
+            {image}
+          </Link>
+          <UnderlineLink
+            href={person.website}
+            className='text-xl font-semibold'
+          >
+            {name}
+          </UnderlineLink>
+        </>
+      ) : (
+        <>
+          {image}
+          <span className='text-xl font-semibold'>{name}</span>
+        </>
+      )}
       <p className='mt-2 text-stone-600'>{person.position}</p>
       {person.firstNames[0] !== 'Adriana' && (
         <p className='mt-1 text-sm font-light text-stone-500'>

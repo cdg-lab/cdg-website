@@ -66,7 +66,7 @@ const PublicationView = ({ publication }: { publication: Publication }) => {
         <p className='mt-1 text-stone-600'>
           {authors.map((author, i) => [
             i > 0 && <span key={i}>{', '}</span>,
-            author.people ? (
+            author.people?.website ? (
               <UnderlineLink href={author.people.website} key={author.name}>
                 {author.name}
               </UnderlineLink>
