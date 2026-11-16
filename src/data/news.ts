@@ -111,7 +111,7 @@ export const news: News[] = [
     date: new Date('2026-10-21'),
     title: 'Adriana Schulz Keynotes Pacific Graphics 2026',
     content:
-      'Adriana Schulz gave the keynote "Designing for the Physical World" at the 34th Pacific Graphics conference.',
+      'Adriana Schulz gave the keynote "Designing for the Physical World" at Pacific Graphics 2026.',
     link: 'https://cs.brown.edu/news/2026/10/21/adriana-schulz-keynotes-pacific-graphics-2026/',
   },
   {
