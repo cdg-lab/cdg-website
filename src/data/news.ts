@@ -118,7 +118,7 @@ export const news: News[] = [
     date: new Date('2026-11-02'),
     title: 'StitchSwitch at UIST 2026',
     content:
-      'Our paper "StitchSwitch: Programmable Surface Deformation and Bistability in Embroidered Textiles", led by Vivian Li, appears at UIST 2026 in Detroit.',
+      'Our paper "StitchSwitch: Programmable Surface Deformation and Bistability in Embroidered Textiles" appears at UIST 2026 in Detroit.',
     link: '/publications/stitchswitch',
   },
 ];
