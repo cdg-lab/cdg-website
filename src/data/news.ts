@@ -67,32 +67,11 @@ export const news: News[] = [
     link: 'https://cs.brown.edu/news/2025/08/19/adriana-schulz-joins-brown-cs-as-associate-professor/',
   },
   {
-    date: new Date('2025-10-14'),
-    title: 'AIDL at Pacific Graphics 2025',
-    content:
-      'Our paper "A Solver-Aided Hierarchical Language for LLM-Driven CAD Design" appears at Pacific Graphics 2025.',
-    link: 'https://doi.org/10.1111/cgf.70250',
-  },
-  {
-    date: new Date('2025-12-15'),
-    title: 'Design for Descent at SIGGRAPH Asia 2025',
-    content:
-      'Our paper "Design for Descent: What Makes a Shape Grammar Easy to Optimize?" appears at SIGGRAPH Asia 2025 in Hong Kong.',
-    link: '/publications/design-for-descent',
-  },
-  {
     date: new Date('2026-06-11'),
     title: 'Amy Zhu Defends PhD Thesis',
     content:
       'Congratulations to Amy Zhu on defending her PhD thesis titled: "Beyond Shape: Construction-Aware Languages for Design for the Physical World". She is joining CLO Virtual Fashion (CLO3D).',
     link: 'https://hdl.handle.net/1773/57744',
-  },
-  {
-    date: new Date('2026-07-19'),
-    title: 'Diceplay at SIGGRAPH 2026',
-    content:
-      'Our paper "Diceplay: A Modular Canvas for Physical Image Composition" appears at SIGGRAPH 2026 in Los Angeles.',
-    link: '/publications/diceplay',
   },
   {
     date: new Date('2026-07-24'),
@@ -113,13 +92,6 @@ export const news: News[] = [
     content:
       'Adriana Schulz gave the keynote "Designing for the Physical World" at Pacific Graphics 2026.',
     link: 'https://cs.brown.edu/news/2026/10/21/adriana-schulz-keynotes-pacific-graphics-2026/',
-  },
-  {
-    date: new Date('2026-11-02'),
-    title: 'StitchSwitch at UIST 2026',
-    content:
-      'Our paper "StitchSwitch: Programmable Surface Deformation and Bistability in Embroidered Textiles" appears at UIST 2026 in Detroit.',
-    link: '/publications/stitchswitch',
   },
 ];
 
