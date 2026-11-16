@@ -201,7 +201,7 @@ const POSITION_ORDER = {
 
 people.sort((a, b) => {
   if (a.until !== undefined && b.until !== undefined && a.until !== b.until)
-    return a.until - b.until;
+    return b.until - a.until;
   if (POSITION_ORDER[a.position] != POSITION_ORDER[b.position])
     return POSITION_ORDER[a.position] - POSITION_ORDER[b.position];
   return a.joined - b.joined;
