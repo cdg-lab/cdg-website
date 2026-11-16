@@ -79,6 +79,7 @@ export const news: News[] = [
     content:
       'Our paper "Sustainability assessment using multimodal artificial intelligence agents" is the cover article of Nature Electronics Volume 9, Issue 7 (July 2026), accompanied by the editorial "An AI fix for an AI problem?".',
     link: 'https://www.nature.com/articles/s41928-026-01679-0',
+    image: 'nature-electronics-cover.jpg',
   },
   {
     date: new Date('2026-09-01'),
@@ -92,6 +93,7 @@ export const news: News[] = [
     content:
       'Adriana Schulz gave the keynote "Designing for the Physical World" at Pacific Graphics 2026.',
     link: 'https://cs.brown.edu/news/2026/10/21/adriana-schulz-keynotes-pacific-graphics-2026/',
+    image: 'pacific-graphics-2026.jpg',
   },
 ];
 
