@@ -39,7 +39,7 @@ export const news: News[] = [
     date: new Date('2025-04-26'),
     title: 'Honorable Mention at CHI 2025',
     content:
-      'Our paper "Incorporating Sustainability in Electronics Design: Obstacles and Opportunities" received an Honorable Mention award at CHI 2025.',
+      'Our paper "Incorporating Sustainability in Electronics Design: Obstacles and Opportunities" received an Honorable Mention at CHI 2025.',
     link: 'https://doi.org/10.1145/3706598.3713299',
   },
   {
@@ -84,7 +84,7 @@ export const news: News[] = [
     date: new Date('2026-09-01'),
     title: 'Three New PhD Students Join the Lab',
     content:
-      'Welcome to Joanna Yoo, Alice Wei and Jackie Aslarus, who join the lab as PhD students this fall.',
+      'Welcome to Joanna Yoo, Alice Wei and Jackie Aslarus, who join the lab as PhD students in fall 2026.',
   },
   {
     date: new Date('2026-10-21'),
