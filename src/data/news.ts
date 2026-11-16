@@ -36,6 +36,13 @@ export const news: News[] = [
       'Congratulations to James Noeckel on defending his PhD thesis titled: "Fabrication-Aware Reconstruction". He is joining Apple as a graphics software engineer.',
   },
   {
+    date: new Date('2025-04-26'),
+    title: 'Honorable Mention at CHI 2025',
+    content:
+      'Our paper "Incorporating Sustainability in Electronics Design: Obstacles and Opportunities" received an Honorable Mention award at CHI 2025.',
+    link: 'https://doi.org/10.1145/3706598.3713299',
+  },
+  {
     date: new Date('2025-05-14'),
     title: 'Yuxuan Mei Defends PhD Thesis',
     content:
@@ -51,13 +58,6 @@ export const news: News[] = [
     title: 'Adriana Schulz Gave a Keynote at SGP 2025',
     link: 'https://sgp2025.my.canva.site/program-page-sgp',
     image: 'sgp2025.jpg',
-  },
-  {
-    date: new Date('2025-04-26'),
-    title: 'Honorable Mention at CHI 2025',
-    content:
-      'Our paper "Incorporating Sustainability in Electronics Design: Obstacles and Opportunities" received an Honorable Mention award at CHI 2025.',
-    link: 'https://doi.org/10.1145/3706598.3713299',
   },
   {
     date: new Date('2025-08-19'),
